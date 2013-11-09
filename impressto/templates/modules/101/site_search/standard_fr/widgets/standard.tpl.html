@@ -1,0 +1,140 @@
+<!-- 
+@Name:Standard
+@Type: impressto
+@Filename: standard.tpl.html
+@Description: Simple layout for search results
+@Author: peterdrinnan
+@Projectnum: 1001
+@Version: 1.0
+@Status: development
+@Date: 2012-06-15
+-->
+
+
+<!-- BEGIN IMAGEGALLERYWRAPPER -->
+
+<div id="image_gallery_body_div">
+
+	{$gallerybody}
+
+	
+</div>
+	
+	
+<!-- END IMAGEGALLERYWRAPPER -->
+
+	
+
+<!-- BEGIN IMAGEGALLERYMAINBODY -->
+
+   <div class="gallery_landing clearfix">
+      <ul>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('2');"> <span>&nbsp;</span> <img alt="Aerials and Lakes" height="152" src="/assets/uploads/image/aerials-and-lake_thumb.jpg" width="152" /> Aerials and Lakes </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('3');"> <span>&nbsp;</span> <img alt="Common Elements" height="152" src="/assets/uploads/image/common-elements_thumb.jpg" width="152" /> Common Elements </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('4');"> <span>&nbsp;</span> <img alt="Foret Clos de Sixte" height="152" src="/assets/uploads/image/forest-clos-de-sixte_thumb.jpg" width="152" /> For&ecirc;t Clos de Sixte </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('5');"> <span>&nbsp;</span> <img alt="Lifestyle: Summer/Fall" height="152" src="/assets/uploads/image/lifestyle-summer-fall_thumb.jpg" width="152" /> Lifestyle: Summer/Fall </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('6');"> <span>&nbsp;</span> <img alt="Countryside of Mulgrave & Derry" height="152" src="/assets/uploads/image/neighbourhood_thumb.jpg" width="152" /> Countryside of Mulgrave &amp; Derry </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('1');"> <span>&nbsp;</span> <img alt="Road Construction" height="152" src="/assets/uploads/image/road-construction_thumb.jpg" width="152" /> Road Construction </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('7');"> <span>&nbsp;</span> <img alt="Tennis Construction" height="152" src="/assets/uploads/image/tennis-construction_thumb.jpg" width="152" /> Tennis Construction </a></li>
+        <li>
+          <a href="javascript:ps_image_gallery.loadcategory_by_id('8');"> <span>&nbsp;</span> <img alt="Winter at the Clos" height="152" src="/assets/uploads/image/winter-at-the-clos_thumb.jpg" width="152" /> Winter at the Clos </a></li>
+      </ul>
+    </div><!-- [END] .gallery_landing -->
+	
+<!-- END IMAGEGALLERYMAINBODY -->
+
+
+<!-- BEGIN IMAGEGALLERYCATPAGE -->
+<?php	  
+		$slidecount = 0;
+		
+		$javascriptstring = "";
+		$imagelist = "";
+		
+		
+		foreach($category_images as $key => $val){
+		
+			$id = str_replace("id_","",$key);
+	
+			$display = "visible";
+			if($slidecount > 0) $display = "none";
+			
+			$imgpath = "/assets/uploads/" . PROJECTNAME  . "/modules/image_gallery/{$ig_category}/";
+								
+			$javascriptstring  .= "images[{$slidecount}] = '{$imgpath}{$val['imagename']}';\n";
+			
+			$imgsrc = "";
+			
+			if($slidecount == "") $imgsrc = "{$imgpath}{$val['imagename']}";
+
+			
+			$imagelist .= "<img style=\"display:{$display}\" id=\"imgslide_{$slidecount}\" src=\"{$imgsrc}\" alt=\"{$val['caption']}\">\n";
+			
+			$slidecount++;
+		
+		} 
+
+		?>
+        
+
+<!-- HERE -->	
+
+
+	<div class="gallery_inner_container clearfix">
+		<div class="ig_controls">
+			<div class="ig_controls_info">
+				<span>{$category_name} <small id="ig_slide_number">(1/<?php echo $slidecount; ?>)</small><span>
+			</div><!-- [END] .ig_controls_info -->
+			<div class="ig_controls_btn">
+				<div style="position: absolute; left: -215px; top: -2px;">{$gallery_category_seletor}</div>
+				<a href="photo-gallery" class="ig_home">Home</a>
+				<a href="javascript:ps_image_gallery.playslideshow()" class="ig_start">Start</a>
+				<a href="javascript:ps_image_gallery.pauseslideshow()" class="ig_stop">Stop</a>
+			</div><!-- [END] .ig_controls_btn -->
+		</div><!-- [END] .ig_controls -->
+		<div id="ig_image_resizer" class="ig_image_container" style="background: url('/assets/<?php echo PROJECTNAME; ?>/modules/image_gallery/widgets/images/spinner.gif'); background-repeat:no-repeat; background-position:center; ">
+			<div class="ig_image_container_prev">
+				<a href="javascript:ps_image_gallery.manual_go_prev_slide()" title="Previous Image">Previous Image</a>
+			</div><!-- [END] .ig_image_container_prev -->
+			<?php echo $imagelist; ?>
+			<div class="ig_image_container_next">
+				<a href="javascript:ps_image_gallery.manual_go_next_slide()" title="Next Image">Next Image</a>
+			</div><!-- [END] .ig_image_container_next -->
+		</div><!-- [END] .ig_image_container -->
+	</div><!-- [END] .gallery_inner_container -->
+	
+	
+	
+<!-- TO HERE -->
+
+	<script type="text/javascript">
+	
+			ps_image_gallery.current_category = '<?php echo $ig_category; ?>';
+			ps_image_gallery.slidecount = '<?php echo $slidecount; ?>';
+			ps_image_gallery.current_slide = '0';
+			
+			var images = new Array();
+
+			<?php echo $javascriptstring; ?>
+			
+	</script>
+    
+
+<!-- END IMAGEGALLERYCATPAGE -->
+
+
+
+
+
+
+
+
+
+
