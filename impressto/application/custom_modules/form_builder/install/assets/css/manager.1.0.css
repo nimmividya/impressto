@@ -1,0 +1,100 @@
+
+:focus {
+	outline: 0;
+}
+
+
+.float-left {
+	float:left!important;
+}
+
+.float-right {
+	float:right!important;
+}
+
+.width50 {
+	width:48%;
+}
+
+.hidden {
+	display:none!important;
+}
+
+
+.clearfix {
+
+	clear:both;
+
+}
+
+
+
+
+
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;	
+}
+
+
+ul#frm_newsletter {
+	padding: 15px 10px 0 0;
+	width: 375px;
+	margin: 0 auto;
+}
+
+label.desc {
+	display: block;
+	font-weight: normal;
+	float: left;
+	width: 100px;
+	padding: 5px 0 0 0;
+	margin: 0 5px 0 0;
+	color: #444;
+	text-align: right;
+	}
+
+.button {
+	padding: 2px 5px !important;
+	font-size: 12px !important;
+	cursor: pointer !important;
+	background: #45930B;
+	border: 1px solid #45930B;
+	color: white;
+}
+.cornered {
+    border-radius: 5px 5px 5px 5px;
+}
+.errorbox {
+border: 1px solid #CC0000; background: #990000;width:250px;margin: 0 auto;height: 20px;margin-bottom: 5px; color: white; padding: 2px 2px;
+}
+.success{
+border: 1px solid green;
+background: #A0CD26;
+padding:10px;
+width:300px;
+margin: 0 auto;
+height: 20px;
+margin-bottom: 5px;
+}
+
+	td.showDragHandle{
+	 background-image: url("../images/updown2.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: move;
+	}
+	tDnD_whileDrag{
+	 background-image: url("../images/updown2.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: move;
+	}

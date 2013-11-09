@@ -1,0 +1,58 @@
+<?php
+
+//////// little security thing  /////////
+is_object($pf) or die( 'Restricted access' );
+/////////////////////////////////////////
+
+$pf->load->library("op_installer");
+
+$blocksets_table = $pf->dbprefix . "_" . "blocksets__" . $pf->cryptichashkey;
+
+if(!$pf->op_database->db_Table_Exists($blocksets_table)){
+
+	$qstring = "CREATE TABLE $blocksets_table (";
+	$qstring .= "ID int(6) NOT NULL auto_increment,";
+	$qstring .= "Name varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_1 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_2 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_3 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_4 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_5 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_6 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_7 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_8 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_9 varchar(255) NOT NULL default '',";
+	$qstring .= "Blocks_10 varchar(255) NOT NULL default '',";
+	$qstring .= " PRIMARY KEY  (ID)";
+	$qstring .= ") TYPE=MyISAM;";
+
+	$pf->op_database->dbquery($qstring);
+
+}
+
+	
+	
+$blockargs_table = $pf->dbprefix . "_blockargs__" . $pf->cryptichashkey;
+
+if(!$pf->op_database->db_Table_Exists($blockargs_table)){
+
+	$qstring = "CREATE TABLE $blockargs_table (";
+	$qstring .= "ID int(6) NOT NULL auto_increment,";
+	$qstring .= "blockname varchar(255) NOT NULL default '',";
+	$qstring .= "argname varchar(255) NOT NULL default '',";
+	$qstring .= "argval varchar(255) NOT NULL default '',";
+	$qstring .= " PRIMARY KEY  (ID)";
+	$qstring .= ") TYPE=MyISAM;";
+
+	$pf->op_database->dbquery($qstring);
+
+}
+
+		$pf->load->library("op_files");
+
+	
+$pf->op_files->create_dirpath($pf->root_dir ."/data/files/blocks","SECURE");
+
+
+
+?>

@@ -1,0 +1,50 @@
+INDEXER
+=======
+
+This is version 1.0 of TextIndexer for php (http://www.php.net) 
+Written Oct. 2004 
+last modification Sep. 2004
+
+by Oliver Kührig <oliver@bitesser.de>
+bitesser.de - http://www.bitesser.de
+viersicht - Medien und Kommunikation - http://www.viersicht.de
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+Description
+===========
+The Indexer is separated in two parts: the indexing mechanism and the searching mechanism. 
+The indexing mechanism is able to generate a text index. You put some text fields with a unique id into the indexer. 
+the searching mechanism returns text clippings with the unique id to identify the origin. 
+It is intended for searching text content in database fields or other text oriented stores.
+
+The Indexer has two main tasks:
+- building the index file
+- searching for a keyword in the index file
+
+How to use
+==========
+Include the file 'class.indexer.php'. Read the examples ('index.php' and 'search.php') to understand how it works.
+
+The result of the searching process is an array of IndexerResult objects.
+The IndexerResult objects properties are:
+	id    : ID of the indexed text values
+	keys  : array of the matching word for the search string
+	score : ranking / relevance of the result
+	text  : string snippet, with the keys in it
+
+
+Installation
+============
+- copy the files in a directory
+- be sure to allow write access to the two sub-dirs 'index' and 'object'
+- maybe edit the blacklist.php to define the words, which you don't want to index
+
+
+History
+=======
+V1.0 2004-11-01
+initial release

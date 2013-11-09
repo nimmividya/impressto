@@ -1,0 +1,342 @@
+.container {
+	width:100%;
+	height:90%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:3;
+}
+div#my_popup *:focus {
+	outline:0;
+}
+div#my_popup {
+	display:none;
+}
+div#my_popup label {
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	cursor:hand;
+	color:#555;
+	text-shadow:0px 1px 0px #fff;
+}
+.my_ticket, .my_ticket span {
+	padding:15px;
+	position:absolute;
+}
+.drag {
+	border:1px #333333 dashed;
+	opacity: .55;
+}
+.my_ticket {
+	top:5px;
+	left:5px;
+	cursor:move;
+	z-index:200;
+/*	box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8); */
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+	border:1px rgba(0,0,0,0.2) solid;
+	transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	word-wrap:break-word;
+	width:180px;
+	min-width:180px;
+	max-width:180px;
+	overflow:hidden;
+	height:180px;
+	min-height:180px;
+	max-height:180px;
+	background:#FFFF66;
+	font-variant:small-caps;
+}
+.my_ticket p {
+	width:100%;
+	min-width:100%;
+	max-width:100%;
+	display:block;
+	margin:0 0 5px 0;
+	padding:0;
+	font-size:130%;
+	text-shadow:0px 1px 1px rgba(255,255,255,.8);
+}
+.my_ticket a, .my_ticket a:link, .my_ticket a:visited {
+	color:#666666;
+	text-shadow:0px 1px 1px rgba(255,255,255,.8);
+	text-decoration:none;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+}
+.my_ticket a:hover {
+	color:#000000;
+	text-decoration:underline;
+}
+.my_ticket a {
+	position:absolute;
+	top:0;
+	right:0;
+	padding:15px;
+}
+.my_ticket span {
+	bottom:0;
+	right:0;
+}
+div#my_popup div.obfuscator {
+	content:"";
+	background:#333333;
+	background:rgba(0,0,0,.8);
+	width:100%;
+	min-width:100%;
+	max-width:100%;
+	height:100%;
+	min-height:100%;
+	max-height:100%;
+	display:block;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:500;
+}
+div#my_popup div.content {
+	position:absolute;
+	z-index:550;
+	padding:1%;
+	top:18%;
+	left:24%;
+	width:50%;
+	min-width:50%;
+	max-width:50%;
+	background:#FFFFFF;
+	background:rgba(255,255,255,.96);
+	box-shadow:0px 2px 8px 3px #000;
+	-moz-box-shadow:0px 2px 8px 3px #000;	-webkit-box-shadow:0px 2px 8px 3px #000;
+	cursor:default;
+	text-align:center;
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+}
+div#my_popup div.content table {
+	text-align:left;
+}
+div#my_popup div.content div.border {
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#a0a0a0 #868686 #868686 #a0a0a0;
+	margin:0 auto;
+	float:left;
+	border-radius:2px;
+}
+div#my_popup div.content div.border div.bar {
+	border-width:1px;
+	border-style:solid;
+	border-color:#FFFFFF #F6F7F9 #F6F7F9 #FFFFFF;
+	background:#F0F0F0;
+	text-align:center;
+}
+div#my_popup div.content div.border div.bar .align {
+	padding:3px 5px 3px 5px;
+}
+div#my_popup div.content div.border div.bar .align:hover {
+	border-radius:2px;
+	border:1px #F8F8F8 solid;
+	box-shadow:0px 0px 0px 1px #ABADB3;
+	-moz-box-shadow:0px 0px 0px 1px #ABADB3;	-webkit-box-shadow:0px 0px 0px 1px #ABADB3;
+	padding:2px 4px 2px 4px;
+	background-color:#e0e0e0;
+}
+div#my_popup div.content div.border div.bar .selected {
+	border-radius:2px;
+	border:1px #E0E0E0 solid;
+	box-shadow:0px 0px 0px 1px #ABADB3;
+	-moz-box-shadow:0px 0px 0px 1px #ABADB3;	-webkit-box-shadow:0px 0px 0px 1px #ABADB3;
+	padding:2px 4px 2px 4px;
+	background-color:#C6C6C6;
+}
+div#my_popup div.content table tr td {
+	padding:5px 0px 5px 0px;
+	text-align:left;
+}
+div#my_popup div.content table textarea, div#my_popup div.content table input[name=author], div#my_popup div.content table input[name=mail], div#my_popup div.content table input[name=title] {
+	width:97%;
+	min-width:97%;
+	max-width:97%;
+	border-radius:2px;
+	border:1px #F8F8F8 solid;
+	box-shadow:0px 0px 0px 1px #ABADB3;
+	-moz-box-shadow:0px 0px 0px 1px #ABADB3;	-webkit-box-shadow:0px 0px 0px 1px #ABADB3;
+	padding:1%;
+	cursor:default;
+	font-family:Arial, Helvetica, sans-serif;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	color:#000000;
+	background-color:#FFFFFF;
+}
+div#my_popup div.content table textarea {
+	overflow-y:visible;
+	resize:none;
+}
+div#my_popup div.content table textarea:focus, div#my_popup div.content table input[name=author]:focus, div#my_popup div.content table input[name=mail]:focus, div#my_popup div.content table input[name=title]:focus {
+	box-shadow:0px 0px 8px #AFAFAF;
+	-moz-box-shadow:0px 0px 8px #AFAFAF;	-webkit-box-shadow:0px 0px 8px #AFAFAF;
+	border:1px #777777 solid;
+	color:#777777;
+	background-color:#F9F9F9;
+}
+div#my_popup div.content span.color {
+	margin:0;
+	padding:0;
+	position:relative;
+}
+div#my_popup div.content span.color #colorpix, div#my_popup div.content span.color #bgcolorpix {
+	border-left:1px #abadb3 solid;
+	border-top:1px #abadb3 solid;
+	border-bottom:1px #abadb3 solid;
+}
+div#my_popup div.content span.color #coloropen, div#my_popup div.content span.color #bgcoloropen {
+	border-right:1px #abadb3 solid;
+	border-top:1px #abadb3 solid;
+	border-bottom:1px #abadb3 solid;
+}
+div#my_popup div.content div.color_select {
+	border:1px #abadb3 solid;
+	margin:0;
+	padding:0;
+	display:block;
+	position:absolute;
+	top:-1px;
+	left:-120px;
+	margin:-90px 0 0 0;
+	width:250px;
+	min-width:250px;
+	max-width:250px;
+	text-align:left;
+	display:none;
+	height:150px;
+	min-height:200px;
+	max-height:200px;
+	overflow-y:auto;
+	background:#D8D8D8;
+	z-index:900;
+	border-radius:3px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#a0a0a0 #818181 #818181 #a0a0a0;
+}
+div#my_popup div.content div.color_select table {
+	text-align:center;
+}
+div#my_popup div.content div.color_select table td {
+	border-top:1px #a0a0a0 solid;
+	border-right:1px #a0a0a0 solid;
+	border-bottom:1px #a0a0a0 solid;
+	border-left:1px #a0a0a0 solid;
+	text-align:center !important;
+}
+div#my_popup div.content div.color_select td img {
+	cursor:pointer;
+	cursor:hand;
+	margin:0 auto;
+	border:1px #F8F8F8 solid;
+	box-shadow:0px 0px 0px 1px #ABADB3;
+	-moz-box-shadow:0px 0px 0px 1px #ABADB3;	-webkit-box-shadow:0px 0px 0px 1px #ABADB3;
+	border-radius:2px;
+}
+div#my_popup div.content div.color_select td.notop {
+	border-top:0px !important;
+}
+div#my_popup div.content div.color_select td.noright {
+	border-right:0px !important;
+}
+div#my_popup div.content div.color_select td.nobottom {
+	border-bottom:0px !important;
+}
+div#my_popup div.content div.color_select td.noleft {
+	border-left:0px !important;
+}
+div#my_popup div.content div.color_select div.footer, div#my_popup div.content div.bgcolor_select div.footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:250px;
+	text-align:center;
+	color:#555;
+	text-shadow:0px 1px 0px #fff;
+}
+input[type=submit].submit:hover, .hover {
+	background: rgb(37,37,37) !important;
+	background: -moz-linear-gradient(top, rgb(37,37,37) 0%, rgb(85,85,85) 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(37,37,37)), color-stop(100%,rgb(85,85,85))) !important;
+	background: -webkit-linear-gradient(top, rgb(37,37,37) 0%,rgb(85,85,85) 100%) !important;
+	background: -o-linear-gradient(top, rgb(37,37,37) 0%,rgb(85,85,85) 100%) !important;
+	background: -ms-linear-gradient(top, rgb(37,37,37) 0%,rgb(85,85,85) 100%) !important;
+	background: linear-gradient(to bottom, rgb(37,37,37) 0%,rgb(85,85,85) 100%) !important;
+	color:#DDDDDD !important;
+	text-shadow:0px 1px 0px #000000 !important;
+}
+input[type=submit].submit {
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#777777 #777777 #777777 #999999;
+	box-shadow: 0px 0px 0px 1px #000;
+	-moz-box-shadow: 0px 0px 0px 1px #000;
+	-webkit-box-shadow: 0px 0px 0px 1px #000;
+	-webkit-border-radius: 0px 4px 4px 0px;
+	border-radius: 0px 4px 4px 0px;
+	padding:4px 9px 4px 9px; 
+	background: rgb(85,85,85);
+	background: -moz-linear-gradient(top, rgb(85,85,85) 0%, rgb(37,37,37) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(85,85,85)), color-stop(100%,rgb(37,37,37)));
+	background: -webkit-linear-gradient(top, rgb(85,85,85) 0%,rgb(37,37,37) 100%);
+	background: -o-linear-gradient(top, rgb(85,85,85) 0%,rgb(37,37,37) 100%);
+	background: -ms-linear-gradient(top, rgb(85,85,85) 0%,rgb(37,37,37) 100%);
+	background: linear-gradient(to bottom, rgb(85,85,85) 0%,rgb(37,37,37) 100%);
+	cursor:pointer;
+	cursor:hand;
+	margin:0;
+	color:#999999;
+	text-shadow:0px -1px 0px #111111;
+	font-weight:bold;
+}
+#my_popup .icon {
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#777777;
+	box-shadow: 0px 0px 0px 1px #000;
+	-moz-box-shadow: 0px 0px 0px 1px #000;
+	-webkit-box-shadow: 0px 0px 0px 1px #000;
+	-webkit-border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 0px 0px 4px;
+	padding:4px 9px 4px 9px; 
+	cursor:pointer;
+	cursor:hand;
+	margin:0;
+	background: rgb(170,51,0);
+	background: -moz-linear-gradient(top, rgb(170,51,0) 0%, rgb(74,22,0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(170,51,0)), color-stop(100%,rgb(74,22,0)));
+	background: -webkit-linear-gradient(top, rgb(170,51,0) 0%,rgb(74,22,0) 100%);
+	background: -o-linear-gradient(top, rgb(170,51,0) 0%,rgb(74,22,0) 100%);
+	background: -ms-linear-gradient(top, rgb(170,51,0) 0%,rgb(74,22,0) 100%);
+	background: linear-gradient(to bottom, rgb(170,51,0) 0%,rgb(74,22,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa3300', endColorstr='#4a1600',GradientType=0 );
+	color:#000;
+	text-shadow:0px 1px 0px #555;
+	font-weight:bold;
+}
+.placeholder {
+	color:#A9A9A9 !important;
+	text-shadow:none !important;
+}

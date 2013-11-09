@@ -1,0 +1,24 @@
+<?
+
+//////// little security thing  /////////
+is_object($pf) or die( 'Restricted access' );
+/////////////////////////////////////////
+
+
+
+
+$modreg_actions[] = "Blocks~ADMIN";
+$modreg_actions[] = "Create~ADMIN";
+$modreg_actions[] = "Delete~ADMIN";
+$modreg_actions[] = "Edit~ADMIN";
+$modreg_actions[] = "index~ADMIN";
+$modreg_actions[] = "Manage~ADMIN";
+$modreg_actions[] = "Matrices~ADMIN";
+$modreg_actions[] = "View~ADMIN";
+$modreg_actions[] = "Remote~ALL";
+
+$modmenu_actions[] = "Matrices";
+
+
+
+?>

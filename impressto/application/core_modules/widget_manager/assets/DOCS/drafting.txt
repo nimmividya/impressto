@@ -1,0 +1,13 @@
+
+
+What I have done in the new version is allow you to use a different block matrice for the draft copy which can be published with the drafted content once approved. This means you can model different block layout without interfering with the live page block layouts.
+
+To create "draft" copies of blocks, you simply need to create copies of them. I'd call them "swappable" copies. The block matrice used with the draft copy of a page can contain these "swappable" copies of blocks instead of the live blocks. Once the draft page with its "swappable" blocks have been approved for publication, clicking on the "Go Live" button within the draft copy interface will update not just the content, but the assigned blocks for the page as well.
+
+On an individual block level, there is no practical way to creating drafts of individual blocks. The best solution is to keep it simple and create copies of blocks you want to change so they can be swappable.
+
+The problem with drafting individual blocks management and programmability.
+
+The management problem, or the "how" of assigning them isn't something I've seen anyone else tackle.  I spent some time researching this and I have not been able to find any cms vendors that provide drafting of individual blocks. I suspect it is because the concept of blocks is so confusing to begin with, adding another layer of complexity would give users an aneurism.
+
+The other problem with drafting blocks on the programming level is that aside from the standard content blocks, most block types tend to be very unique, developed for specific functions and/or client needs. In the case of the google map blocks, data that is used to allow the maps to function comes from several sources (xml, sql tables and an html component), so drafting would only allow you to change a limited amount of the data anyway. It would be better to create a new copy of the maps block in order to be able to change all elements, such as the size of the map, the markers that appear, and the content associated with each marker.
