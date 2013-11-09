@@ -1,0 +1,75 @@
+#pageList a {
+  font-size:12px;
+  color:#333333;
+}
+#pageList ul {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  cursor:move;
+}
+#pageList ul li {
+  margin:0 0 0 15px;
+  font:11px/12px Arial, Helvetica, sans-serif;
+}
+#pageList .li {
+  padding:0;
+  height:22px;
+}
+#pageList .li:hover { background-color:#f7f7f7; }
+#pageList .li:hover .edit { display:block; }
+#pageList .li:hover .author { display:block; }
+#pageList .edit {
+  display:none;
+  float:right;
+}
+#pageList .author {
+  text-align:right;
+  float:right;
+  margin-top:1px;
+  padding-right:4px;
+  display:none;
+  font:10px/10px Arial, Helvetica, sans-serif;
+  color:#999999;
+}
+#pageList img {
+  cursor:pointer;
+  padding-top:2px;
+  margin-bottom:-4px;
+  float:left;
+}
+#pageList a.editLink {
+  color:#444444;
+  padding:5px;
+}
+#pageList a.editLink:hover {
+  text-decoration:none;
+  color:#3bb5d9;
+}
+#pageList a.editLink_unpublished {
+  color:#990000;
+  padding:5px;
+}
+#pageList a.editLink_unpublished:hover {
+  text-decoration:none;
+  color:#ff0000;
+}
+#pageList a.editLink_unpublished_notpublic {
+  color:#990000;
+  padding:5px;
+}
+#pageList a.editLink_unpublished_notpublic:hover {
+  text-decoration:none;
+  color:#ff0000;
+}
+#pageList a.editLink_notpublic {
+  color:#444444;
+  padding:5px;
+  text-decoration:underline;
+}
+#pageList a.editLink_notpublic:hover { text-decoration:none; }
+#pageList li > div > a {
+  vertical-align:middle;
+  margin-top:4px;
+  float:left;
+}
