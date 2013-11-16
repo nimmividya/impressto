@@ -1,0 +1,61 @@
+
+
+
+
+
+
+#widgetCollections .available_widgets {
+  float:left;
+  width:342px;
+}
+#widgetCollections .available_widgets .droppablewidgets {
+
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  background-color:#f2f2f2;
+  border:1px solid #dddddd;
+  margin:0 0 5px;
+  padding:1px 10px 10px;
+  cursor:move;
+}
+#widgetCollections .available_widgets .droppablewidgets-drag {
+  width:320px;
+  opacity:0.3;
+}
+#widgetCollections .available_widgets .ui-draggable-dragging {
+
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  border:1px solid #999999;
+  background-color:#e6e6e6;
+  cursor:move;
+  z-index:500;
+}
+#widgetCollections .widget_zones {
+  float:left;
+  width:342px;
+  margin-left:35px;
+}
+#widgetCollections .widget_zones .widget_dropzone {
+  border:2px dashed #e9e9e9;
+  padding:10px;
+  color:#cccccc;
+  font-size:16px;
+  font-weight:bold;
+  text-align:center;
+  margin:10px 0;
+}
+#widgetCollections .widget_zones .droppablewidgets-hover {
+  display:block !important;
+  border:2px dashed #adadad;
+}
+#widgetCollections .widget_zones .widgetzone_rowlabel {
+  float:left;
+  padding:5px;
+  font-size:12px;
+}
+

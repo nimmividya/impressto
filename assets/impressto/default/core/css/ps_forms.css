@@ -1,0 +1,85 @@
+
+.qfield.label
+{
+	font-weight:bold;
+	padding:3px;
+	margin-left: 0px;
+	color: #333333;
+	border-radius:0!important;
+	background-color: transparent;
+	text-shadow: none;
+
+
+}
+
+.qfield.checkbox.label{
+	font-weight:normal;
+	line-height: 30px;
+}
+
+
+.qfield.checkbox.label.horizontal{
+	
+
+}
+
+.qfield.checkbox.label.vertical{
+
+}
+
+.qfield.checkboxmultiple.label.horizontal{
+
+	margin-left: 0px;
+}
+
+.qfield.checkboxmultiple.label.vertical{
+
+}
+
+.qfield.date.label.horizontal{
+
+}
+
+.qfield.date.label.vertical{
+
+}
+
+.qfield.select.label.horizontal{
+
+}
+
+.qfield.select.label.vertical{
+
+}
+
+.qfield.selectcombo.label.horizontal{
+
+
+
+}
+
+.qfield.selectcombo.label.vertical{
+
+
+
+}
+
+.qfield.text.label.horizontal{
+
+
+
+}
+
+.qfield.text.label.vertical{
+
+}
+
+.qfield.textarea.label.horizontal{
+
+	padding:5px
+}
+
+.qfield.textarea.label.vertical{
+
+
+}

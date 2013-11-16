@@ -1,0 +1,974 @@
+@charset 'UTF-8';
+
+body {
+  background: #333 !important;
+}
+
+body,input,textarea {
+  font-family: Arial;
+  color: #666;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+a img {
+  border: none;
+}
+
+#w,
+#h,
+#wR,
+#hR{
+  display:none;
+}
+
+
+#hDiv,
+#wDiv,
+#hRDiv,
+#wRDiv {
+  display: inline;
+}
+
+#AlertModal,
+#questionModal,
+#ResizeModal
+ {
+  width:600px;
+  z-index: 99999999;
+  height:220px;
+}
+#AlertModal .modal-footer,
+#questionModal .modal-footer,
+#ResizeModal .modal-footer{
+  width:570px;
+
+}
+
+#cropModal{
+  width:992px;
+  left:31% !important;
+  top:42%;
+  background: #888;
+}
+
+#DoneEditImage{
+  left:420px;
+  position: relative;
+}
+
+.alertModalBody,
+.questionModalBody {
+  width: 560px;
+  text-align: center;
+  height: 104px !important;
+  min-height: 104px !important;
+}
+
+#selectedImages .ui-sortable-placeholder {
+  height: 38px !important;
+}
+
+.imageImage img {
+  height:100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin: 0 -25%;
+}
+
+#previewValues input {
+  color: #FFF;
+  background: transparent;
+  border: none;
+}
+
+.previewValuesHolder {
+  color: #FFF;
+  font-size: 12px;
+  position: relative;
+  float: left;
+  left: 5px;
+}
+
+.viewerEmptyMessage{
+  position: absolute !important;
+  font-size: 24px !important;
+  color: #555 !important;
+  width: 500px;
+}
+
+.uploaderEmptyMessage {
+  font-weight: 700;
+  color: #CCC;
+  font-size: 34px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.demoDivSlider{
+width:740px !important;
+}
+
+.demoDiv {
+  width: 500px;
+  height: 500px;
+  border: solid 1px #ddd;
+  margin: 20px;
+  position: relative;
+  float: left;
+}
+
+.divTestImg img {
+  margin: 0 -25%;
+  width: 88px;
+}
+
+.divTestImg {
+  text-align: center;
+  width: 88px;
+  height: 88px;
+  border: solid 1px #ccc;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 2px;
+}
+
+.clickToEditImg a {
+  top: 0;
+  margin: 0;
+  left: -11px;
+  width: 17px;
+  height: 21px;
+  padding: 3px 0 0 9px;
+}
+
+.clickToEditImg {
+  left: -1px;
+  z-index: 999;
+  top: -1px;
+  position: absolute;
+  display: none;
+}
+
+.clickToEditImgDisplay {
+  display: block;
+}
+
+#purr-container {
+  z-index:99999992;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.notice-body {
+  min-height: 50px;
+  padding: 22px 22px 0;
+  background: url(../img/purr/purrTop.png) no-repeat left top;
+  color: #f9f9f9;
+}
+
+.notice-body h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.notice-body p {
+  margin: 5px 0 0 60px;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.notice-bottom {
+  height: 22px;
+  background: url(../img/purr/purrBottom.png) no-repeat left top;
+}
+
+/*
+ * jQuery File Upload UI Plugin CSS 6.3
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 4px;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: solid transparent;
+  border-width: 0 0 100px 200px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transform: translate(-300px,0) scale(4);
+  direction: ltr;
+  cursor: pointer;
+}
+
+.fileupload-buttonbar .btn,.fileupload-buttonbar .toggle {
+  margin-top: 0;
+}
+
+.files .progress {
+  width: 200px;
+}
+
+.progress-animated .bar {
+  background: url(../img/progressbar.gif) !important;
+  filter: none;
+}
+
+.fileupload-loading {
+  position: absolute;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  background: url(../img/loading.gif) center no-repeat;
+  display: none;
+}
+
+.fileupload-processing .fileupload-loading {
+  display: block;
+}
+/* Fix for IE 6: */
+*html .fileinput-button {
+  line-height: 22px;
+  margin: 1px -3px 0 0;
+}
+
+/* Fix for IE 7: */
+*+html .fileinput-button {
+  margin: 1px 0 0;
+}
+
+@media max-width 480px {
+  .files .btn span {
+    display: none;
+  }
+  
+  .files .preview * {
+    width: 40px;
+  }
+  
+  .files .name * {
+    width: 80px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  
+  .files .progress {
+    width: 20px;
+  }
+  
+  .files .delete {
+    width: 60px;
+  }
+
+}
+/* Main interface */
+
+.SelectedHeaderWording{
+background: #222;
+color: white;
+font-size: 11px;
+text-align: center;
+}
+
+#insertImage {
+  left: 278px;
+}
+
+#addrBar {
+  width: 100%;
+  -moz-user-select: none;
+  float: left;
+  background: #3B99BD;
+  margin: 3px 0 2px;
+}
+
+#addrBar .addrBar1 {
+  background: url(../img/layout/leftSide.png) repeat;
+}
+
+#addrBar .addrBar2 {
+  color: #fff;
+  height: 23px;
+  width: 994px;
+  padding: 0 3px;
+  overflow: hidden;
+}
+
+.addrItem {
+  float: left;
+  padding: 0 15px 0 5px;
+  margin: 1px 0;
+  height: 21px;
+  background-image: url(../img/arrowRight.gif);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.addrItem img {
+  margin: 2px 0 0;
+  cursor: pointer;
+}
+
+.addrItem div {
+  margin: 3px 0 0;
+  cursor: pointer;
+}
+
+.addrItemEnd {
+  float: left;
+  padding: 0 5px;
+  margin: 1px 0;
+  height: 21px;
+  font-size: 12px;
+}
+
+.addrItemEnd div {
+  color: #fff;
+  margin: 2px 0 0;
+}
+
+#toBeginBtn {
+  cursor: pointer;
+}
+
+
+#toolBar {
+  height: 41px;
+  width: 100%;
+  background: url(../img/layout/leftSide.png) repeat;
+  -moz-user-select: none;
+}
+
+#toolBar .toolBar1 {
+  background: transparent url(../img/toolLeft.gif) no-repeat left top;
+}
+
+.toolItem {
+  float: left;
+  margin: 0 10px;
+  color: #eff4f8;
+  font-size: 12px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.toolItem img {
+  margin: 8px 0;
+  float: left;
+}
+
+.toolItem span {
+  display: block;
+  float: left;
+  margin: 9px 0 0 8px;
+}
+
+#mainField {
+  width: 100%;
+  height: 415px;
+  background-color: #fcfcfc;
+}
+
+#mainTree {
+  vertical-align: top;
+  width: 220px;
+  border-right: solid 1px #a7bac5;
+  background: url(../img/layout/leftSide.png) repeat;
+  overflow: auto;
+}
+
+#mainTreeHolder {
+  height: 415px;
+  overflow: auto;
+}
+
+#loader {
+  z-index: 999999;
+  float: right;
+  margin: 8px 8px 0 0;
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#loader img {
+  width:124px;
+  height:124px;
+	position: absolute;
+    top: 40%;
+    left: 50%;
+	z-index:999;
+
+}
+
+
+#foot {
+  width: 100%;
+  background: url(../img/layout/leftSide.png) repeat;
+  height: 70px;
+  font-size: 12px;
+  color: #000;
+}
+
+#footTable {
+  width: 100%;
+  margin: 2px 0 0 15px;
+  font-size: 12px;
+}
+
+#footTable td,#footTable td a {
+  color: #fff;
+  padding: 10px 5px 0 0;
+}
+
+#footTableName {
+  visibility: visible;
+  position: absolute;
+  left: 15px;
+  color: #FFF;
+  top: 553px;
+  font-size: 12px;
+}
+
+#footTableName td {
+  padding: 0;
+}
+
+.footLabel {
+  text-align: right;
+  color: #737373;
+  -moz-user-select: none;
+}
+
+#footSize,#footExt,#footDate,#fileNameEdit,#footLink,#footDim {
+  -moz-user-select: none;
+}
+
+.ich_headerImage {
+  width: 20px;
+  height: 20px;
+  background: url(../img/gh-icons.png) 0 -958px no-repeat;
+}
+
+#tree {
+overflow: auto;
+height: 418px;
+  padding: 10px 0;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+.folderImages,.folderFiles,.folderClosed,.folderOpened,.folderS,#newFolderBlock {
+  background: url(../img/gh-icons.png) 0 0 no-repeat;
+  padding: 9px 5px 0 24px;
+}
+.folderImages {
+  color: #fff;
+  background-position: 5px -948px;
+  font-size: 12px;
+  height: 29px;
+  margin: 0 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.folderFiles {
+  background-position: 5px -28px;
+  font-size: 12px;
+  height: 29px;
+  margin: 0 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.folderClosed {
+  color: #fff;
+  background-position: 5px -806px;
+  font-size: 12px;
+  height: 29px;
+  margin: 0 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.folderOpened {
+  color: #fff;
+  background-position: 5px -771px;
+  font-size: 12px;
+  height: 29px;
+  margin: 0 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.folderS {
+  color: #fff;
+  background-position: 5px -843px;
+  font-size: 12px;
+  height: 29px;
+  margin: 0 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.folderAct {
+  color: #fff;
+  background-position: 5px -771px;
+  padding: 9px 5px 0 24px;
+  height: 29px;
+  background-color: #3e4242;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.folderHover {
+  height: 29px;
+  background-color: #3e4242;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.folderActHover {
+  height: 29px;
+  background-color: #3e4242;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.folderOpenSection {
+  padding: 0 0 0 15px;
+  display: none;
+}
+
+#newFolderBlock {
+  background-position: 5px -875px;
+  height: 29px;
+  margin: 0 7px 0 22px;
+  white-space: nowrap;
+  display: none;
+}
+#newFolderBlock input {
+  width: 100%;
+  font-size: 12px;
+  font-family: tahoma,arial;
+  vertical-align: top;
+  border: solid 1px #ccc;
+}
+
+#mainFiles {
+  /* width: 680px; */
+  background: url(../img/layout/filesSide.png) repeat;
+  background-position: 0 -28px;
+  height: 415px;
+}
+
+#files {
+
+  position: relative\9; /* IE 8 and below */
+  *position: relative; /* IE 7 and below */
+  _position: relative; /* IE 6 */
+  /* width: 679px; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 430px;
+  padding-left: 6px;
+  -moz-user-select: none;
+}
+
+.imageBlock {
+  float: left;
+  width: 114px;
+  height: 144px;
+  margin: 1px;
+  border: solid 1px #000;
+}
+
+.imageBlock0 {
+  float: left;
+  width: 118px;
+  height: 148px;
+  margin: 1px;
+  border: solid 1px #fcfcfc;
+}
+
+.imageBlockHover {
+  background-color: #222;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.imageBlockAct {
+  background-color: #222;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.imageBlockActHover {
+  background-color: #222;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.IMsliderZoom{
+  position: relative;
+display:-moz-inline-stack;
+display:inline-block;
+zoom:1;
+*display:inline;
+  margin-left: 10px !important;
+  width: 100px;
+  height: 7px;
+  background: #444;
+}
+
+.IMWhiteFont{
+  color: #EEE;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  background: #CCC;
+}
+
+.imageName {
+  color: #fff;
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+.imageImage {
+  position: relative;
+  left: 5px;
+  width: 100px;
+  border: 1px solid #CCC;
+  height: 100px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  overflow: hidden;
+}
+
+#upload {
+  display: none;
+}
+
+.closeButtonfManager:hover {
+  color: #CCC !important;
+}
+
+.closeButtonfManager {
+  top: 0 !important;
+  padding: 8px 7px 9px 18px !important;
+  border-left: 1px solid #BBB !important;
+}
+
+#shadowBack {
+  background-color: #000;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+}
+
+#uploadWindow {
+  overflow-y: auto;
+  position: absolute;
+  left: 15%;
+  top: 28px;
+  z-index: 1000000;
+  background: #FFF;
+  width: 855px;
+  height: 494px;
+}
+
+#uploadWindow1 {
+  position: relative;
+  width: 819px;
+  height: 458px;
+  background-color: #FFF;
+  margin: 18px;
+}
+
+#uploadClose {
+  z-index: 1040;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  background: url(../img/gh-icons.png) no-repeat 2px -1046px;
+  cursor: pointer;
+}
+
+.name a {
+  color: #743399;
+  text-decoration: none;
+}
+
+.preview {
+  width: 80px;
+}
+
+.template-upload .delete,.template-download .delete {
+  width: 120px;
+}
+
+.template-upload .cancel {
+  width: 100px;
+}
+
+.template-upload .start {
+  width: 85px;
+}
+
+#uploadMenu {
+  left: 13px;
+  top: 10px;
+  position: absolute;
+  color: #515151;
+  font-size: 14px;
+}
+#uploadMenu * {
+  margin-right: 15px;
+  outline: none;
+}
+
+#uploadMenu a:link {
+  color: #b6b6b6;
+  text-decoration: none;
+  border-bottom: dashed 1px #b6b6b6;
+}
+
+#uploadMenu a:active {
+  color: #515151;
+  text-decoration: none;
+  border-bottom: dashed 1px #515151;
+}
+
+#uploadMenu a:visited {
+  color: #b6b6b6;
+  text-decoration: none;
+  border-bottom: dashed 1px #b6b6b6;
+}
+
+#uploadMenu a:hover {
+  color: #515151;
+  text-decoration: none;
+  border-bottom: dashed 1px #515151;
+}
+
+#uploadMenu a.act:link {
+  color: #515151;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#uploadMenu a.act:active {
+  color: #515151;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#uploadMenu a.act:visited {
+  color: #515151;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#uploadMenu a.act:hover {
+  color: #515151;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#uploadTarget {
+  bottom: 7px;
+  color: #111;
+  font-size: 14px;
+  left: 13px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 525px;
+}
+
+#uploadTarget span {
+  color: #515151;
+  margin-right: 8px;
+}
+
+#menuCancelFolder,#menuSaveFolder {
+  display: none;
+}
+
+#fileNameValue {
+  top: -5px;
+  position: relative;
+  left: -6px;
+  border: none;
+  width: 150px;
+  height: 26px;
+}
+
+#fileName {
+  width: 150px;
+  position: relative;
+  float: left;
+  height: 19px;
+  padding: 5px 0 5px 5px;
+  border: solid 1px #CCC;
+  overflow: hidden;
+}
+
+#fileNameEdit {
+  position: relative;
+  float: left;
+  display: inline-block;
+  top: -7px;
+  height: 19px;
+  left: -8px;
+  cursor: pointer;
+}
+
+#fileNameSave {
+  position: relative;
+  float: left;
+  display: inline-block;
+  top: -7px;
+  height: 19px;
+  left: -8px;
+  cursor: pointer;
+  display: none;
+}
+
+#footLink {
+  white-space: nowrap;
+}
+
+.footInfo {
+  visibility: hidden;
+}
+
+.custom-state-active{
+  background: #ff0000 url(../img/gh-icons.png) no-repeat 73px -988px !important;
+}
+
+
+#divStatus {
+  padding-left: 10px;
+}
+
+
+/* -- Selected images style ------------------------------- */
+.selectedImgBlockMain:hover {
+  background: #444;
+  outline: none;
+  opacity: .8;
+}
+
+.imageBlock1:hover {
+  outline: none;
+  opacity: .8;
+}
+
+.ui-draggable,.ui-droppable {
+  background-position: top left;
+}
+
+.ui-draggable-dragging {
+  z-index: 101;
+  background: #222 !important;
+}
+
+#selectedImages {
+  z-index:9999;
+  background: #555;
+  padding-top: 20px;
+  padding-bottom: 88px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: right;
+  height: 314px;
+  width: 168px;
+}
+
+#selectedImages h4 {
+  padding-left: 26px;
+  height: 21px;
+  font-size: 12px;
+  top: 107px;
+  line-height: 7px;
+  margin: 0 0 0 .4em;
+  width: 168px;
+  background: #222;
+  position: absolute;
+}
+
+.selectedImgBlockMain{
+  width: 155px !important;
+  height: 38px !important;
+  display: block;
+  border-bottom: solid 1px #777;
+  padding: 4px 0 4px 0;
+  margin: 0 0 0 6px !important;
+}
+
+.selectedImgBlockMain,.imageBlock1 {
+  z-index:9999;
+  margin: 5px;
+  bottom: 0;
+  width: 112px;
+  height: 120px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.selectedImgBlock {
+  overflow: hidden;
+  width: 112px;
+  position: relative;
+  float: right;
+  height: 15px;
+  text-align: left;
+  color: #BBB !important;
+}
+
+#trash {
+  width: 168px;
+  z-index: 10000;
+  height: 50px;
+  position: absolute;
+  top: 498px;
+  background: #574E4E url(../img/gh-icons.png) no-repeat 73px -988px;
+}

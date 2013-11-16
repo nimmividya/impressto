@@ -1,0 +1,102 @@
+div#styleswitcher-bar{
+	width:120px;
+	margin:0 0 0px 0;
+	padding:10px;
+	background:#333;
+	position:fixed;
+	left:5px;
+	top:5px;
+	z-index:99998;
+	border:1px solid #000;
+}
+div#styleswitcher-bar b{
+	float:left;
+	width:100%;
+	color:#fff;
+	font-size:16px;
+	margin:0px 0px 0 0px;
+}
+ul.css-styles,
+ul.lb-styles{
+	width:auto;
+	float:left;
+	margin:0px 0 20px;
+	list-style-type:circle;
+	padding:5px 0 0 0;
+}
+ul.css-styles li,
+ul.lb-styles li{
+	float:left;
+	width:100%;
+	margin:4px 0 4px 16px;
+	color:#fff;
+}
+ul.css-styles a,
+ul.css-styles a:active,
+ul.css-styles a:visited,
+ul.lb-styles a,
+ul.lb-styles a:active,
+ul.lb-styles a:visited{
+	float:left;
+	color:#fff;
+	margin:px 0 0 0px;
+}
+ul.css-styles a:hover,
+ul.lb-styles a:hover{
+	text-decoration:underline;
+	color:#F90;
+}
+a.close-stylebar{
+	float:left;
+	width:118px;
+	text-align:center;
+	color:#222;
+	margin:0;
+	padding:5px 0 5px 0;
+	background:#FFF;
+	border:1px solid #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+}
+a.close-stylebar:hover{
+	color:#fff;
+	background:#000;
+	border:1px solid #fff;
+	text-decoration:none;
+}
+div#switch-overlay{
+	position:fixed;
+	left:0;
+	top:0;
+	display:none;
+	width:100%;
+	height:100%;
+	background:#333 url(../images/loading-ss.gif) 50% 50% no-repeat;
+	z-index:99999;
+}
+a.buy-item{
+	float:left;
+	width:118px;
+	text-align:center;
+	color:#fff;
+	margin:0 0 5px 0;
+	padding:5px 0 5px 0;
+	background:#ff7200;
+	border:1px solid #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+}
+a.buy-item:hover{
+	color:#ff7200;
+	background:#fff;
+	border:1px solid #000;
+	text-decoration:none;
+}	
+	
+	
+	
+	
+	
+	

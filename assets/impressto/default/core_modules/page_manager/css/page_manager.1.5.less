@@ -1,0 +1,112 @@
+
+
+
+/*	#pageList
+***************/
+
+#pageList a{
+
+	font-size:12px;
+	color: #333;
+}
+
+
+#pageList{
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		cursor: move;
+		li{
+			margin: 0 0 0 15px;
+			font: 11px/12px Arial, Helvetica, sans-serif;
+		}
+	}
+	.li{
+		padding: 0;
+		height: 22px;
+		&:hover{
+			background-color: #f7f7f7;
+			.edit{
+				display: block;
+			}
+			.author{
+				display: block;
+			}
+		}
+	}
+	
+
+	.edit{
+		display: none;
+		float: right;
+	}
+	.author{
+		text-align: right;
+		float: right;
+		margin-top: 1px;
+		padding-right: 4px;
+		display: none;
+		font: 10px/10px Arial, Helvetica, sans-serif;
+		color: #999;
+	}
+	img{
+		cursor: pointer;
+		padding-top: 2px;
+		margin-bottom: -4px;
+		float: left;
+	}
+	a{
+		&.editLink{
+			color: #444;
+			padding: 5px;
+			&:hover{
+				text-decoration: none;
+				color: #3bb5d9;
+			}
+		}
+		//Unpublished
+		&.editLink_unpublished{
+			color: #900;
+			padding: 5px;
+			&:hover{
+				text-decoration: none;
+				color: #f00;
+			}
+		}
+		//Unpublished & Not in a Menu
+		&.editLink_unpublished_notpublic{
+			color: #900;
+			padding: 5px;
+			&:hover{
+				text-decoration: none;
+				color: #f00;
+			}
+		}
+		//Published but no in a Menu
+		&.editLink_notpublic{
+			color: #444444;
+			padding: 5px;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#pageList li > div > a {
+	vertical-align: middle;
+	margin-top:4px;
+	float: left;
+}
+
+.template_box{
+
+	background:#F2F5F6;
+	padding: 5px;
+	width:100%;
+	border: 1px solid #B2D3DC;
+}
+
+	

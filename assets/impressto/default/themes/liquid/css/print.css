@@ -1,0 +1,14 @@
+
+
+.navbar, .sidebar{
+
+	display:none;
+	margin-left: 0;
+	width:100%;
+	
+}
+
+.main_content{
+	margin-left: 0;
+
+}

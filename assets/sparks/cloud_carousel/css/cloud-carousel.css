@@ -1,0 +1,48 @@
+#my-cloud-carousel {
+	width		: 600px;
+	height		: 320px;
+	background	: #000;
+	overflow	: scroll;
+}
+
+
+#carousel-title-text
+ {
+    color: #FF9900;
+    display: none;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 20px 20px 10px;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+#carousel-alt-text {
+    color: #DDDDDD;
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 20px 20px;
+}
+
+#carousel-left-but {
+    background: url("../images/rotate-left.png") repeat scroll 0 0 transparent;
+    height: 40px;
+    width: 40px;
+	float:left;
+}
+
+#carousel-right-but {
+
+	background: url("../images/rotate-right.png") repeat scroll 0 0 transparent;
+
+    height: 40px;
+    width: 40px;
+	top: 20px; 
+	right: 20px;
+	float:left;	
+	
+}
+

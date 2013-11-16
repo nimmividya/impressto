@@ -1,0 +1,14 @@
+
+.tags_container{width:300px;padding:10px 10px;}
+.tags ul{padding:5px 5px;}
+.tags li{margin:0;padding:0;list-style:none;display:inline;}
+.tags li a{text-decoration:none;padding:0 2px;}
+.tags li a:hover{text-decoration:underline;} 
+
+.tag1 a{font-size:12px; color: #9c639c;}
+.tag2 a{font-size:14px; color: #cece31;}
+.tag3 a{font-size:16px; color: #9c9c9c;}
+.tag4 a{font-size:18px; color: #31ce31;}
+.tag5 a{font-size:20px; color: #6363ad;}
+.tag6 a{font-size:22px; color: #ce6300;}
+.tag7 a{font-size:24px; color: #9c3100;}

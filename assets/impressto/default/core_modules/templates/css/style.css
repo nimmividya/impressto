@@ -1,0 +1,18 @@
+
+
+.template_edit_table tr {
+    height: 60px;
+}
+.template_edit_table tr td {
+    padding-left: 10px;
+	vertical-align: top;
+}
+.template_edit_table tr td label {
+    display: block;
+    margin: 0 0 5px;
+}
+.template_edit_table tr td input {
+    width: 150px;
+}
+
+

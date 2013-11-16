@@ -1,0 +1,62 @@
+
+
+
+.inputgnrc, select {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    color: #444444;
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    padding: 3px;
+    width: 230px;
+}
+.inputsave {
+    color: #444444;
+    font-family: arial;
+    font-size: 18px;
+    height: 40px;
+    margin: 0;
+    padding: 3px;
+    width: 400px;
+}
+ul {
+    list-style: none outside none;
+}
+.cgfparams ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    color: #555555;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+ul li label {
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.cfg {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #AAAAAA;
+    border-radius: 2px 2px 2px 2px;
+    float: left;
+    margin: 0;
+}
+.cgfparams {
+    float: left;
+    padding: 15px;
+}
+.cgftip {
+    border-left: 1px solid #AAAAAA;
+    margin-left: 281px;
+    min-height: 202px;
+    padding: 1px 20px 20px;
+    width: 340px;
+}
+
+
