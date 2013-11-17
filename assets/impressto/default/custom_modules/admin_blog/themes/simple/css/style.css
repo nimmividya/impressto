@@ -1,0 +1,40 @@
+
+.blog-featured-image, .blog-empty-image, .blog-summary{
+
+	float:left;
+	
+}
+
+.blog-empty-image{
+
+	max-width:280px;
+	
+}
+
+.blog-featured-image{
+
+	max-width:280px;
+
+
+}
+
+
+.blog-summary{
+
+	padding-left: 20px;
+	width:600px;
+	
+}
+
+.articlePreview h1 a{
+
+	font-size:20px;
+	color: #222;
+	text-decoration: none;
+}
+
+.articlePreview .authorship{
+
+	margin:-5px 0 10px 0;
+ 
+}
