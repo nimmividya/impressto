@@ -35,7 +35,7 @@ class __skeleton_name__ extends Widget
 		}
 	
 		////////////////////////////////
-		// peterdrinnan - May 21, 2012
+		// Nimmitha Vidyathilaka - May 21, 2012
 		//add the path for the widgets module so we can locate the models	
 		$this->load->_add_module_paths('__skeleton_name__');
 		$this->load->model('__skeleton_name__/__skeleton_name___model');

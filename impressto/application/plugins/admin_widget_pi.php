@@ -77,7 +77,7 @@ class Admin_Widget extends Widget
 	*
 	* IMPORTANT: THIS WILL ONLY PARSE PHP TEMPATES. SMARTY OR OTHERS WILL THROW AN ERROR
 	*
-	* @author peter drinnan
+	* @author Nimmitha Vidyathilaka
 	*/
 	function render($view, $data = array(), $return_html =  FALSE) {
 		

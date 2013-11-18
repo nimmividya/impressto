@@ -5,7 +5,7 @@
 @Filename: font_resizer.php
 @Description: Adds a simple font resizer toolbar
 @Projectnum: 1001
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Status: development
 @Date: 2012-06-29
 */

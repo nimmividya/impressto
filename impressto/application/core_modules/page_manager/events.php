@@ -60,21 +60,6 @@ class Events_Page_Manager {
     {
 	
         $CI =& get_instance();	
-		
-		if($data['lang'] != "" && $data['CO_Url'] != ""){
-		
-			$cachefile = APPPATH . PROJECTNUM . "/cache/pages/";
-
-			$page_identifier = $data['lang'] . "/" . $data['CO_Url'];
-			if(isset($data['query'])) $page_identifier .= "?" . $data['query'];
-			
-			$cachefile .= urlencode($page_identifier);
-			
-			
-			$cachefile .= ".html";
-			
-		}
-		
 			
 		$CI->load->library('file_tools');
 		$CI->load->library('template_loader');
@@ -83,12 +68,12 @@ class Events_Page_Manager {
 
 		$CI->file_tools->create_dirpath(APPPATH . PROJECTNUM . "/cache/pages/");
 	
-		if(isset($cachefile) && file_exists($cachefile)) unlink($cachefile);
+		if(isset($data['cachefile']) && file_exists($data['cachefile'])) unlink($data['cachefile']);
 		
 		
 		$outbuf = $CI->template_loader->render_template($data);
 
-		if(isset($cachefile)) file_put_contents($cachefile, $outbuf);
+		if(isset($data['cachefile'])) file_put_contents($data['cachefile'], $outbuf);
 		
 		
 		return $outbuf;

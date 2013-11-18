@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: widget_manager.php
 @Description: manage widgets and assign them to collections and zones
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete
@@ -58,7 +58,7 @@ foreach($widget_collection_options as $key=>$val){
 <div id="widgetcollections_div" style="display:none;">
 
 <div style="width:740px">
-<h2 style="float:left" id="collection_title"></h2>
+
 <div style="float:right; margin-right:25px;">
 
 <button class="btn btn-default" type="button" id="shownewzonefield_btn" onclick="ps_widget_manager.shownewzonefield()">
@@ -71,10 +71,6 @@ Delete this collection <i class="icon-trash icon-white"></i>
 
 </div>
 
-
-<div style="float:right; margin-right:8px; margin-top:0px;">
-
-
 <div id="new_widget_zone_div" style="margin-left:20px; display:none">
 <input style="width:80px;" type="text" id="new_widget_zone_field" />
 <input type="text" style="width:45px;" id="colorpicker" />
@@ -82,6 +78,19 @@ Delete this collection <i class="icon-trash icon-white"></i>
 <button class="btn btn-default" type="button" onclick="ps_widget_manager.savezone()">Save</button>
 <button onclick="ps_widget_manager.cancelzone()" class="btn">Cancel</button>
 </div>
+
+
+<div class="clearfix"></div>
+
+
+<h2 style="float:left" id="collection_title"></h2>
+
+
+
+<div style="float:right; margin-right:8px; margin-top:0px;">
+
+
+
 
 </div>
 
@@ -194,7 +203,7 @@ foreach($active_widgets as $widgetitem){
 	<button style="float:left" id="shortcode_<?=$widgetitem['id']?>_btn" onclick="ps_widget_manager.show_widgetshortcode(this,'<?=$widgetitem['id']?>')" type="button" class="btn btn-small">Shortcode <i class="icon-cog"></i></button>
 	<input READONLY style="width:290px; display:none" id="shortcode_<?=$widgetitem['id']?>" value="<?=$widget_shortcode?>" />
 	
-	<button style="float:left" id="slug_<?=$widgetitem['id']?>_btn" onclick="ps_widget_manager.show_widget_slug(this,'<?=$widgetitem['id']?>')" type="button" class="btn btn-small">Slug <i class="icon-cog"></i></button>
+	<button style="float:left; margin-left:10px" id="slug_<?=$widgetitem['id']?>_btn" onclick="ps_widget_manager.show_widget_slug(this,'<?=$widgetitem['id']?>')" type="button" class="btn btn-small">Slug <i class="icon-cog"></i></button>
 	<div class="clearfix"></div>
 	<div id="widget_slug_code_<?=$widgetitem['id']?>" style="display:none">
 	<input style="width:150px;" id="slug_<?=$widgetitem['id']?>" value="<?=$widget_slug?>" />

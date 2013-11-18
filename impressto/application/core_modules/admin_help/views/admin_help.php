@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: admin_help.php
 @Description: 
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

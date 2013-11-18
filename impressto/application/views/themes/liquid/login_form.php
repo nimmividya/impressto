@@ -12,11 +12,11 @@
 		// probably loaded already but loading this so we don't get an error .
 		$this->load->library('asset_loader');
 		
-		$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap.min.css","","all");
-		$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap-responsive.min.css","","all");
+		$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap.min.css","","all");
+		$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap-responsive.min.css","","all");
 	
 		$this->asset_loader->add_header_css("/assets/" . PROJECTNAME . "/default/themes/liquid/css/blue.css","","all");
-		$this->asset_loader->add_header_css("default/third_party/qtip2/jquery.qtip.min.css","","all");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/qtip2/jquery.qtip.min.css","","all");
 		$this->asset_loader->add_header_css("/assets/" . PROJECTNAME . "/default/themes/liquid/css/style.css","","all");
 		
 		
@@ -145,11 +145,11 @@
 		<?php
 		
 		
-		$this->asset_loader->add_header_js_top("third_party/jquery/jquery-" . $this->config->item('jquery_version') . ".js");
+		$this->asset_loader->add_header_js_top("vendor/jquery/jquery-" . $this->config->item('jquery_version') . ".js");
 		$this->asset_loader->add_header_js("/assets/" . PROJECTNAME . "/default/themes/liquid/js/jquery.actual.min.js","","all");
-		$this->asset_loader->add_header_js("default/third_party/validation/jquery.validate.min.js","","all");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/validate/jquery.validate.min.js","","all");
 		//$this->asset_loader->add_header_js("/assets/" . PROJECTNAME . "/default/themes/liquid/js/gebo_validation.js","","all");
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap.min.js","","all");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap.min.js","","all");
 		
 		$this->asset_loader->add_header_js_top("/assets/" . PROJECTNAME . "/default/core/js/appclass.js");	
 		$this->asset_loader->add_header_js("/assets/" . PROJECTNAME . "/default/core/js/appbase.js","","all");

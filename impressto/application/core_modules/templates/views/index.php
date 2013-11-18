@@ -31,7 +31,7 @@ are not copied back to the developement server will likely be lost on the next c
 
 <!-- <div style="float:left">
 	<?php
-		// TODO: peter drinnan turned this pff temporarily while looking for a time machine.
+		// TODO: Nimmitha Vidyathilaka turned this pff temporarily while looking for a time machine.
 		//echo $template_type_selector;
 	?>
 </div> -->

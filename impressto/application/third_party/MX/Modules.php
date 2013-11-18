@@ -196,7 +196,7 @@ class Modules
 		global $CFG;
 
 		///////////////
-		// peterdrinnan - allow absolute paths within the application folder to load
+		// Nimmitha Vidyathilaka - allow absolute paths within the application folder to load
 		$file = str_replace("\\","/",$file);
 		if (is_file($file) && strpos($file, APPPATH) !== false ) return array(dirname($file).DS, basename($file));			
 		if (is_file($file.EXT) && strpos($file, APPPATH) !== false ) return array(dirname($file).DS, basename($file) . EXT);
@@ -216,7 +216,7 @@ class Modules
 		}
 
 		/////////////////////////////////////////
-		// peterdrinnan - added code to give preference to docket versions of models
+		// Nimmitha Vidyathilaka - added code to give preference to docket versions of models
 		if(isset($CFG->config['projectnum'])){
 		
 			
@@ -259,7 +259,7 @@ class Modules
 			}
 		}
 
-		// peterdrinnan - now we will look into the docket model folders
+		// Nimmitha Vidyathilaka - now we will look into the docket model folders
 		if(isset($CFG->config['projectnum'])){
 		
 			$fullpath = APPPATH. $CFG->config['projectnum'] . "/" . $base;

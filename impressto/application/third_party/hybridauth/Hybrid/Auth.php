@@ -68,7 +68,7 @@ class Hybrid_Auth
 			$config["debug_file"] = null;
 		}
 		
-		//peterdrinnan		
+		//Nimmitha Vidyathilaka		
 		if($config["debug_mode"] && !file_exists($config["debug_file"])){
 	
 			$file = fopen($config["debug_file"], 'w') or die("can't create HybridAuth debug file");

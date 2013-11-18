@@ -22,8 +22,7 @@ $this->load->library('asset_loader');
 
 		$this->asset_loader->add_header_css_top("vendor/jquery-ui/css/Aristo/Aristo.css","","all");
 	
-		$this->asset_loader->add_header_css_top(ASSETURL . PROJECTNAME . "/default/themes/liquid/css/style.css","","all");
-		
+
 			
 		if($this->config->item('thirdpartypopup') == FALSE || $this->config->item('thirdpartypopup') == "") {
 
@@ -63,6 +62,9 @@ $this->load->library('asset_loader');
 		// these are base admin styles that are loaded last to ensure they apply to all components
 		$this->asset_loader->add_header_css_top("core/css/admin_base.css","","all");
 		$this->asset_loader->add_header_css_top("core/css/ps_forms.css","","all");
+	
+		$this->asset_loader->add_header_css_top(ASSETURL . PROJECTNAME . "/default/themes/liquid/css/style.css","","all");
+		
 		
 		echo $this->asset_loader->output_header_css();
 		

@@ -1,10 +1,10 @@
 <!-- scripts -->
-<script language="javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/markitup/jquery.markitup.js"></script>
-<script type="text/javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/markitup/sets/default/set.js"></script>
+<script language="javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/jquery/plugins/markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/jquery/plugins/markitup/sets/default/set.js"></script>
 
 <!-- stylsheets -->
-<link rel="stylesheet" type="text/css" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/markitup/skins/markitup/style.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/markitup/sets/default/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/jquery/plugins/markitup/skins/markitup/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/jquery/plugins/markitup/sets/default/style.css" />
 
 <!-- All the Javascripts that are beign called Dynamicly -->
 <?php echo $headerjs; ?>

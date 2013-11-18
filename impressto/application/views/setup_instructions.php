@@ -53,8 +53,8 @@
 		<ul>
 		
 		<li> FILE psinit.php	</li>
-		<li> FILE <?=$document_root?>/<?php echo PROJECTNAME; ?>/third_party/elfinder/server/cache/plugins_cache.ser	</li>
-		<li> FILE <?=$document_root?>/<?php echo PROJECTNAME; ?>/third_party/elfinder/server/cache/plugins_requires.ser	</li>
+		<li> FILE <?=$document_root?>/<?php echo PROJECTNAME; ?>/vendor/xtras/elfinder/server/cache/plugins_cache.ser	</li>
+		<li> FILE <?=$document_root?>/<?php echo PROJECTNAME; ?>/vendor/xtras/elfinder/server/cache/plugins_requires.ser	</li>
 		<li> FOLDER install_inactive </li>
 		<li> FOLDER <?=$document_root?>/<?php echo PROJECTNAME; ?>/application/cache/smarty	</li>
 		<li> FOLDER <?=$document_root?>/<?php echo PROJECTNAME; ?>/application/cache/user_sessions	</li>

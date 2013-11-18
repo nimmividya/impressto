@@ -145,7 +145,7 @@ $config['url_suffix'] = '';
 |
 */
 $config['language']	= 'english';
-// peterdrinnan - we have to override this based on the users perference
+// Nimmitha Vidyathilaka - we have to override this based on the users perference
 //$config['language']	= 'french';
 
 /*

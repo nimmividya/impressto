@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: users.php
 @Description: manage site users
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: in development

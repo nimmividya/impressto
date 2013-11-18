@@ -50,7 +50,7 @@ foreach($module_list as $module_dirname => $module_data){
 
 ?> 
 
-<div id="side_accordion" class="accordion">
+
 
 
 <?php
@@ -124,7 +124,24 @@ foreach($autosections AS $section => $sectionval){
 	}
 	
 	if($listitems != ""){ ?>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading <?=$menusection[$section]['active']?>">
+				<a href="#<?=$sectionval['menutrigger']?>" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+						<i class="<?=$sectionval['icon']?>"></i> <?php echo lang('leftnav_' . $section); ?>
+					</a>
+				</div>
+				<div class="accordion-body <?=$menusection[$section]['in']?> collapse" id="<?=$sectionval['menutrigger']?>">
+					<div class="panel-body">
+						<ul class="nav nav-pills nav-stacked">
+								<?=$listitems?>
+						</ul>
+			
+					</div>
+				</div>
+			</div>
 		
+		<!--
 		<div class="accordion-group">
 		<div class="accordion-heading <?=$menusection[$section]['active']?>">
 		<a href="#<?=$sectionval['menutrigger']?>" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
@@ -139,6 +156,7 @@ foreach($autosections AS $section => $sectionval){
 		</div>
 		</div>
 		</div>
+		-->
 		
 		<?php
 		
@@ -151,7 +169,6 @@ foreach($autosections AS $section => $sectionval){
 ?>
 
 
-</div>
 
 
 <?php

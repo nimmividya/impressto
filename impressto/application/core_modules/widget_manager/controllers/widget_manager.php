@@ -42,18 +42,18 @@ class widget_manager extends PSAdmin_Controller {
 		
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/core_modules/widget_manager/js/widget_manager.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/mincolors/jquery.miniColors.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery/plugins/mincolors/jquery.miniColors.js");
 		
 		
 		
 
-		$this->asset_loader->add_header_js('/third_party/bootstrap/js/bootstrap-tooltip.js');
-		$this->asset_loader->add_header_js('/third_party/bootstrap/js/bootstrap/bootstrap-alert.js');
+		$this->asset_loader->add_header_js('/vendor/bootstrap/js/bootstrap-tooltip.js');
+		$this->asset_loader->add_header_js('/vendor/bootstrap/js/bootstrap/bootstrap-alert.js');
 		
 		
 		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . '/default/core_modules/widget_manager/css/style.css');
 	
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . '/default/third_party/mincolors/jquery.miniColors.css');
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . '/default/vendor/jquery/plugins/mincolors/jquery.miniColors.css');
 		
 		$fielddata = array(
 			'name'     =>  "wm_zone_selector",

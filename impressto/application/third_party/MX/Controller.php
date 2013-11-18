@@ -61,7 +61,7 @@ class MX_Controller
 	/**
 	* Simply gets the module version number if it exists
 	* @return bool FALSE on fail, string version on success
-	* @author peter drinnan
+	* @author Nimmitha Vidyathilaka
 	* @since November 06, 2012 
 	*/	
 	public function _get_module_version(){

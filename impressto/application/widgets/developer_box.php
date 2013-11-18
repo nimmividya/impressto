@@ -2,7 +2,7 @@
 /*
 @Name: Developer Box
 @Filename: developer_box.php
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1
 @Status: complete

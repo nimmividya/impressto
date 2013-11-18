@@ -5,7 +5,7 @@
 @Filename: widget_list.php
 @Lang: 
 @Description: Simple shows a list of all the site widgets
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Status: complete
 @Date: 2012-06-18
@@ -15,10 +15,10 @@ $this->load->library('asset_loader');
 
 $this->asset_loader->add_header_css("core/css/reset.css","","all");
 			
-$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap.css","","all");
-$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap-responsive.min.css","","all");
+$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap.css","","all");
+$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap-responsive.min.css","","all");
 
-$this->asset_loader->add_header_js_top("third_party/jquery/jquery-" . $this->config->item('jquery_version') . ".js");	
+$this->asset_loader->add_header_js_top("vendor/jquery/jquery-" . $this->config->item('jquery_version') . ".js");	
 		
 
 
@@ -52,8 +52,8 @@ $this->asset_loader->add_header_js_top("third_party/jquery/jquery-" . $this->con
 	
 	</style>
 
-	<script type="text/javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/tiny_mce/tiny_mce_popup.js"></script>
-	<script type="text/javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/tiny_mce/plugins/widgets/js/dialog.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/tiny_mce/tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/tiny_mce/plugins/widgets/js/dialog.js"></script>
 	
 </head>
 <body>

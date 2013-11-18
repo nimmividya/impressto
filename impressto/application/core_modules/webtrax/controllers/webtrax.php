@@ -44,13 +44,13 @@ class webtrax extends PSBase_Controller {
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/webtrax/js/webtrax.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/admin_users/js/user_manager.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/admin_users/js/user_field_manager.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/core/js/libs/jquery.validate.min.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/jquery/jquery.tablednd.js");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/validate/jquery.validate.min.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery/jquery.tablednd.js");
 
 	
 
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap-tooltip.js");
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap-dropdown.js");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap-tooltip.js");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap-dropdown.js");
 		
 		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME."/core_modules/admin_users/css/style.css");		
 				

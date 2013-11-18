@@ -2,7 +2,7 @@
 /*
 @Name: NavBar Menu
 @Filename: navbarmenu.php
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1
 @Status: complete

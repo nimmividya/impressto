@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: edit.php
 @Description: edit blog entries
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete
@@ -69,7 +69,7 @@ $(function() {
 
 </script>
 
-<div class="admin-box">
+<div class="admin-box" ng-controller="ps_blogmanager.blogCtrl">
 <h3>Edit Blog Item</h3>
 
 <br />
@@ -165,18 +165,28 @@ $request_uri = getenv("REQUEST_URI");
 	
 			
 			<div class="control-group">
-			    <label class="control-label" for="author_<?=$langcode?>">Author</label>
-				<div class="controls">
-					<input type="text" id="author_<?=$langcode?>" name="author_<?=$langcode?>" style="width:200px" value="<?=$blogdata['author_' . $langcode]?>" />
+			
+				<div class="pull-left">
+			
+					<label class="control-label" for="author_<?=$langcode?>">Author</label>
+					<div class="controls">
+						<input type="text" id="author_<?=$langcode?>" name="author_<?=$langcode?>" style="width:200px" value="<?=$blogdata['author_' . $langcode]?>" />
+					</div>
+				</div>
+				
+				
+				<div class="pull-left" style="margin-left:10px">
+				
+					<label class="control-label" for="publish_date_<?=$langcode?>">Publish Date</label>
+					<div class="controls">
+						<input type="text" id="publish_date_<?=$langcode?>" name="publish_date_<?=$langcode?>" style="width:80px" value="<?=$blogdata['publish_date_'.$langcode]?>" />
+					</div>
 				</div>
 			</div>
 			
 			
 			
-			<div style="float:left">
-				<label for="publish_date_<?=$langcode?>">Publish Date</label>
-				<input type="text" id="publish_date_<?=$langcode?>" name="publish_date_<?=$langcode?>" style="width:80px" value="<?=$blogdata['publish_date_'.$langcode]?>" />
-			</div>
+	
 			
 	
 			

@@ -117,7 +117,7 @@ class template_loader {
 		
 		switch($template_type){
 			
-		case "smarty" :
+		case "smarty" : // soon to be removed FOREVER!!!!
 		
 		
 			if(!file_exists($CI->config->item('smarty_compile_dir'))){
@@ -151,7 +151,7 @@ class template_loader {
 				
 			}else{
 				
-				// peterdrinnan - october 31, 2012
+				// Nimmitha Vidyathilaka - october 31, 2012
 				/*
 		          ,
                  _))._
@@ -228,6 +228,8 @@ class template_loader {
 							
 			// globalize everything in $data
 			extract($data);
+			
+			//var_dump($data);
 			
 			
 			ob_start();

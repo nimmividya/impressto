@@ -26,7 +26,7 @@ foreach($module_list as $module_dirname => $module_data){
 
  ?> 
  
-	<!-- peterdrinnan - hacked in. should go in core css -->
+	<!-- Nimmitha Vidyathilaka - hacked in. should go in core css -->
 	<style>
 	
 	.active_lmenu{

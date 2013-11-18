@@ -2,7 +2,7 @@
 
 if(!isset($data)) $data = array();
 
-// peterdrinnan - this is intentionally loaded above the header_includes call because we want the assets loaded in the header
+// Nimmitha Vidyathilaka - this is intentionally loaded above the header_includes call because we want the assets loaded in the header
 //if(ENVIRONMENT != "production" && !isset($data['developer_toolbox'])){
 
 //	$data['developer_toolbox'] = $this->load->view('admin/includes/developer_toolbox', $data, TRUE); 

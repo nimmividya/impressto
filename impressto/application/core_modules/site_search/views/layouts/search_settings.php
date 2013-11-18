@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: manager.php
 @Description: settings for site search and the search widget
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete
@@ -13,6 +13,8 @@
 ?>
 
 <?php 
+
+$CI = &get_instance();
 
 $languages = $this->config->item('languages');
 
@@ -58,26 +60,50 @@ $request_uri = getenv("REQUEST_URI");
 		<br />
 			
 
-	<label for="search_template">Search Page</label>
+	<!-- loop through all available languages -->
+	
+	<?php
+
+		$lang_avail = $CI ->config->item('lang_avail');
+			
+		
+		foreach($lang_avail AS $langcode=>$language){
+
+		
+				
+				
+	?>
+	
+	<label for="search_template"><?=$language?> Search Page</label>
+	
 	<?php 
 	
 	$data = array(
-	"language" =>"en",
-	'name'        => "search_page",
+	"language" => $langcode,
+	'name'        => "search_page_" . $langcode,
 	'type'          => 'select',
 	'showlabels'          => false,
-	'id'          => "search_page",
+	'id'          => "search_page_" . $langcode,
 	'width'          => 300,
 	'usewrapper'          => FALSE,
 	'label'          => "",
 	'onchange' => "",
-	'value'       => (isset($searchoptions['search_page']) ? $searchoptions['search_page'] : '')
+	'value'       => (isset($searchoptions['search_page_' . $langcode]) ? $searchoptions['search_page_' . $langcode] : '')
 	
 	);
 	
 	echo get_ps_page_slector($data); 
 	
 	?>
+	
+	<div class="clearfix"></div>
+	
+	<?php
+	
+	} 
+	
+	?>
+	
 	
 	
 	<div class="clearfix"></div>

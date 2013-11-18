@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: manager.php
 @Description: manage content blocks that can be inserted into pages and content
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

@@ -35,11 +35,11 @@ class templates extends PSBase_Controller {
 	
 		$this->load->helper('im_helper');
 
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/jquery.markitup.js");		
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/jquery.markitup.js");		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/templates/js/markitup_set.js");	
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/templates/js/template_manager.js");
 		
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/skins/markitup/style.css");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/skins/markitup/style.css");
 		$this->asset_loader->add_header_css(ASSETURL .PROJECTNAME."/core_modules/templates/css/markitup_style.css");	
 		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/core_modules/templates/css/style.css");	
 

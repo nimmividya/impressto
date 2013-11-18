@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: manager.php
 @Description: settings for site search and the search widget
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

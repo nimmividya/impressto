@@ -36,8 +36,6 @@ class Dashboard extends PSAdmin_Controller {
 	*/
 	public function index() {
 		
-
-		
 		$user_session_data = $this->session->all_userdata();	
 		$data['user_role'] = $user_session_data['role']; 
 		
@@ -165,10 +163,10 @@ class Dashboard extends PSAdmin_Controller {
 		$this->load->library('asset_loader');
 	
 		// See http://loudev.com/	
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/third_party/multiselect/js/jquery.multi-select.js");	
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/third_party/multiselect/css/multi-select.css");	
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/vendor/jquery/plugins/multiselect/js/jquery.multi-select.js");	
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/vendor/jquery/plugins/multiselect/css/multi-select.css");	
 		// optional component for searching select lists
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/third_party/multiselect/js/jquery.quicksearch.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/vendor/jquery/plugins/multiselect/js/jquery.quicksearch.js");
 		
 
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core/js/knockout-2.2.1.js");

@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: manage.php
 @Description: manage dashboard settings
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: in development

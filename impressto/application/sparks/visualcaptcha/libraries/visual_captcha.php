@@ -249,7 +249,7 @@ class visual_captcha{
 				);
 				
 			
-				// peterdrinnan - there are some fucked up things going on with data caching
+				// Nimmitha Vidyathilaka - there are some fucked up things going on with data caching
 				// that is making life hell for cache management.
 				$this->CI->session->set_userdata($ses);
 				$this->value = $answer;

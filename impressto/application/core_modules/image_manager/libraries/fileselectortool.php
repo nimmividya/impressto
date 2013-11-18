@@ -186,7 +186,7 @@ class fileselectortool {
 		$handle = opendir($beginFolder);
 		if ($handle) {
 			$struct[$beginFolder]['path'] = str_replace(array($this->dir['images']),'',$beginFolder);
-			// peterdrinnan
+			// Nimmitha Vidyathilaka
 			$tmp = explode('[\\/]',$beginFolder);
 			$tmp = array_filter($tmp);
 			end($tmp);
@@ -198,7 +198,7 @@ class fileselectortool {
 						$struct[$beginFolder]['childs'][] = $this->Tree($beginFolder.'/'.$file);
 					} else{
 					
-						// peterdrinnan - make sure there is an image here
+						// Nimmitha Vidyathilaka - make sure there is an image here
 
 						$file_info = pathinfo($file);
 						$file_info['extension'] = strtolower($file_info['extension']);
@@ -232,7 +232,7 @@ class fileselectortool {
 		
 		$currentDirArr = array();
 		if(!empty($currentDir)) {
-			// peterdrinnan
+			// Nimmitha Vidyathilaka
 			$currentDirArr = explode('[\\/]',str_replace($this->dir[$type],'',realpath($currentDir)));
 			$currentDirArr = array_filter($currentDirArr);
 		}
@@ -312,7 +312,7 @@ class fileselectortool {
 				if( 
 					$soc > 0 
 					&& 
-					// peterdrinnan
+					// Nimmitha Vidyathilaka
 					$currentDirArr[($soc-1)] == $v['name']
 				) {
 					$folderAct = 'folderAct';
@@ -337,7 +337,7 @@ class fileselectortool {
 		
 		if(!empty($path)) {
 			
-			// peterdrinnan
+			// Nimmitha Vidyathilaka
 			$path = explode('[\\/]',str_replace($this->dir[$type],'',realpath($path)));
 			
 			//print_r($path);

@@ -34,7 +34,7 @@ class Index extends PSFront_Controller {
 		$data['projectnum'] = $this->config->item('projectnum');
 		$data['document_root'] = getenv("DOCUMENT_ROOT");
 		
-		// peterdrinnan - june 02, 2012 need to check if this is just an incorrect url before we assume the docket number isn't setup yet.
+		// Nimmitha Vidyathilaka - june 02, 2012 need to check if this is just an incorrect url before we assume the docket number isn't setup yet.
 		// this was an oversight on my part
 			
 		$this->load->view("setup_instructions", $data);

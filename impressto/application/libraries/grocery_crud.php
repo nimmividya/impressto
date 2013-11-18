@@ -2031,7 +2031,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 		if($this->language !== 'english')
 		{
 			//include($this->default_config_path.'/language_alias.php');
-			// peterdrinnan
+			// Nimmitha Vidyathilaka
 			include($this->default_config_path.'/language_alias.php');
 			
 			if(array_key_exists($this->language, $language_alias))
@@ -3079,8 +3079,9 @@ class grocery_CRUD extends grocery_CRUD_States
 	public function set_default_assets_path($val){
 	
 		$this->default_assets_path = $val;
-		$this->default_assets_url_path = str_replace(getenv("DOCUMENT_ROOT") . "/", "", $val);
-			
+		
+		$this->default_assets_url_path = str_replace(getenv("DOCUMENT_ROOT"), "/", $val);
+	
 
 	}
 	
@@ -3485,7 +3486,7 @@ class grocery_CRUD extends grocery_CRUD_States
 		}
 
 		//include($this->default_language_path.'/'.$this->language.'.php');
-		// peterdrinnan
+		// Nimmitha Vidyathilaka
 		$langfile = $this->default_language_path.'/'.$this->language.'/grocery_crud.php';
 		
 		include($langfile);

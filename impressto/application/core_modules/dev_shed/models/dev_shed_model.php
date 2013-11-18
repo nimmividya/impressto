@@ -97,7 +97,7 @@ class dev_shed_model extends My_Model{
 		
 		$return_array = array();
 		
-		$sql = "SELECT email_address FROM {$this->db->dbprefix}users WHERE role = '1'";
+		$sql = "SELECT email FROM {$this->db->dbprefix}users WHERE role = '1'";
 		
 		$query = $this->db->query($sql);	
 

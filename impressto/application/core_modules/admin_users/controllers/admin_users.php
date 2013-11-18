@@ -52,17 +52,17 @@ class Admin_Users extends PSAdmin_Controller {
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/admin_users/js/user_manager.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/admin_users/js/user_field_manager.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/core/js/libs/jquery.validate.min.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/jquery/jquery.tablednd.js");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/validate/jquery.validate.min.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery/jquery.tablednd.js");
 
 		// used for delete dialogue
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/bootstrap/js/bootstrap-confirm.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/bootstrap/js/bootstrap-confirm.js");
 		
 		// used for improved combo select boxes
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/multiselect/js/jquery.multi-select.js");	
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/default/third_party/multiselect/css/multi-select.css");	
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery/plugins/multiselect/js/jquery.multi-select.js");	
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/default/vendor/jquery/plugins/multiselect/css/multi-select.css");	
 		// optional component for searching select lists
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/multiselect/js/jquery.quicksearch.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery/plugins/multiselect/js/jquery.quicksearch.js");
 		
 		
 
@@ -70,10 +70,10 @@ class Admin_Users extends PSAdmin_Controller {
 		
 	
 
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap-tooltip.js");
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap-dropdown.js");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap-tooltip.js");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap-dropdown.js");
 	
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/third_party/handlebars.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/vendor/xtras/handlebars.js");
 	
 		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME."/core_modules/admin_users/css/style.css");		
 				

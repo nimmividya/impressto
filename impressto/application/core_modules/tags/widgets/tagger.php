@@ -24,8 +24,8 @@ class tagger extends Admin_Widget
 
 		$this->asset_loader->add_header_css("default/core_modules/tags/css/tagger.css");
 		
-		$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap-tagmanager.css");
-		$this->asset_loader->add_header_js("third_party/bootstrap/js/bootstrap-tagmanager.js");
+		$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap-tagmanager.css");
+		$this->asset_loader->add_header_js("vendor/bootstrap/js/bootstrap-tagmanager.js");
 	
 		
 				

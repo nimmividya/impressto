@@ -51,6 +51,10 @@ class content_blocks_model extends My_Model{
 		
 		$sql .= implode(" ",$dblangjoins);
 		
+		$sql .= " ORDER BY updated DESC ";
+		
+		//echo $sql;
+		
 	
 		
 		$query = $this->db->query($sql);
@@ -157,7 +161,9 @@ class content_blocks_model extends My_Model{
 		'javascript' => $data['javascript'],
 		'css' => $data['css'],
 		'template' => $data['template'],
-		'blockmobile' => (isset($data['blockmobile']) && $data['blockmobile'] != "") ? 'Y' : 'N'
+		'blockmobile' => (isset($data['blockmobile']) && $data['blockmobile'] != "") ? 'Y' : 'N',
+		'updated' => date('Y-m-d H:i:s')
+		
 		);
 
 		

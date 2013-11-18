@@ -37,16 +37,16 @@ class stylesheet_manager extends PSAdmin_Controller {
 
 		
 		
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/third_party/mincolors/jquery.miniColors.css");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/mincolors/jquery.miniColors.css");
 		
 
 
 		
-		$this->asset_loader->add_header_css(ASSETURL . 'third_party/linedtextarea/jquery-linedtextarea.css');
+		$this->asset_loader->add_header_css(ASSETURL . 'vendor/jquery/plugins/linedtextarea/jquery-linedtextarea.css');
 
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/mincolors/jquery.miniColors.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/mincolors/jquery.miniColors.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . '/default/core_modules/stylesheet_manager/js/stylesheet_manager.js');
-		$this->asset_loader->add_header_js(ASSETURL . 'third_party/linedtextarea/jquery-linedtextarea.js');
+		$this->asset_loader->add_header_js(ASSETURL . 'vendor/jquery/plugins/linedtextarea/jquery-linedtextarea.js');
 		
 		
 		$modules = $this->stylesheet_manager_model->getmodules();

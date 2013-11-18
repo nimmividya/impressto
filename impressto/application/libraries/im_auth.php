@@ -1,30 +1,29 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-/**
-* authentication library - functions to assist in validating and setting user sessions 
-*
-* @package		im_auth
-* @author		Galbraith Desmond <galbraithdesmond@gmail.com>
-* @description Assists in validating and setting user sessions.
-*
-*/
 
+class im_auth{
 
-class im_auth {
 	
 	var $user_session_folder; 
 
-	public function __construct()
-	{
-		
-		$CI =& get_instance();
-		
-		$CI->load->library('session');
-	
 
+	function __construct($config = array())
+	{
+		$CI =& get_instance();
+		$CI->load->helper('url_helper');
+	
+		//$config['base_url'] = site_url($CI->config->item('base_url'));
+			
+		//parent::__construct($config);
+
+	
+		$CI->load->library('session');
 		$CI->load->model($CI->config->item('authprovider'). "_model", "authprovider_model");
 		
-		
+		//log_message('debug', 'HybridAuthLib Class Initalized');
+
+
+				
 		$this->user_session_folder = $CI->config->item('user_sessions_dir');
 		
 		if(!file_exists($this->user_session_folder)){
@@ -34,9 +33,12 @@ class im_auth {
 			
 		}
 		
+		
 	}
+
+
 	
-	
+
 	
 	public function loginform($data = ''){
 	
@@ -72,7 +74,10 @@ class im_auth {
 		}		
 	}	
 	
-	
+	/**
+	* standard check for logged in state
+	*
+	*/
 	public function logged_in(){
 
 
@@ -128,26 +133,23 @@ class im_auth {
 		$return_array = array("error"=>"","redirect"=>"");
 				
 		$CI =& get_instance();
-		
-
-
-		
+	
 		// this is where the hybridauth magic happens...
-		$query = $CI->authprovider_model->validate(); // this is a call to the local model
+		$result = $CI->authprovider_model->validate(); // this is a call to the local model
 		
 		
-		if($query) // if the user's credentials validated...
+		if($result) // if the user's credentials validated...
 		{
 			
-			if ($query->num_rows() > 0)  $row = $query->row(); 
+			//if ($query->num_rows() > 0)  $row = $query->row(); 
 			
 			$data = array(
 			
-			'id' => $row->im_auth_id,
-			'username' => $row->im_auth_username,
-			'email' => $row->im_auth_email_address,				
-			'role' => $row->im_auth_role,
-			'user_group' => $row->im_auth_user_group,					
+			'id' => $result['id'],
+			'username' => $result['username'],
+			'email' => $result['email'],				
+			'role' => $result['role'],
+			'user_group' => $result['user_group'],					
 			'is_logged_in' => true
 			
 			);
@@ -157,8 +159,8 @@ class im_auth {
 						
 			$user_session_data = array(
 			
-			'username' => $row->im_auth_username,
-			'password' => $row->im_auth_password,
+			'username' => $result['username'],
+			'password' => $result['password'],
 			'session_id'  => $CI->session->userdata('session_id'),
 			
 			);
@@ -425,27 +427,6 @@ class im_auth {
 	
 	
 	
-	/**
-	*  Used for hybrid auth
-	*
-	* @author David Gorman
-	*/
-	public function endpoint()
-	{
-
-		log_message('debug', 'controllers.HAuth.endpoint called.');
-		log_message('info', 'controllers.HAuth.endpoint: $_REQUEST: '.print_r($_REQUEST, TRUE));
-
-		if ($_SERVER['REQUEST_METHOD'] === 'GET')
-		{
-			log_message('debug', 'controllers.HAuth.endpoint: the request method is GET, copying REQUEST array into GET array.');
-			$_GET = $_REQUEST;
-		}
-
-		log_message('debug', 'controllers.HAuth.endpoint: loading the original HybridAuth endpoint script.');
-		require_once APPPATH.'/third_party/hybridauth/index.php';
-
-	}
 	
 	/**
 	* returns the full profile record of the selected user by joining the
@@ -533,5 +514,5 @@ class im_auth {
 		return preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", $email);
 	}
 	
-}
 
+}

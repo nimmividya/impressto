@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS `{$dbprefix}contentblocks` (
    `css` text,
   `template` varchar(50) DEFAULT '',
   `blockmobile` enum('Y','N') DEFAULT 'N',
-  PRIMARY KEY (`id`)
+  `updated` datetime DEFAULT NULL,
+   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 

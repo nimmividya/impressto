@@ -168,7 +168,7 @@ class Widget
 	*
 	* IMPORTANT: THIS WILL ONLY PARSE PHP TEMPATES. SMARTY OR OTHERS WILL THROW AN ERROR
 	*
-	* @author peter drinnan
+	* @author Nimmitha Vidyathilaka
 	*/
 	public function render($view, $data = array(), $return_html =  FALSE) {
 		
@@ -337,7 +337,7 @@ class Widget
 	/**
 	* Simply gets the module version number if it exists
 	* @return bool FALSE on fail, string version on success
-	* @author peter drinnan
+	* @author Nimmitha Vidyathilaka
 	* @since November 06, 2012 
 	*/	
 	public function _get_module_version($module){

@@ -33,8 +33,8 @@ class asset_loader {
 	public $header_top_css = null;
 	public $header_top_js = null;
 	
-	public $misc_header_top_assets = null; //  this allows us to load custom third party header data
-	public $misc_header_assets = null; //  this allows us to load custom third party header data
+	public $misc_header_top_assets = null; //  this allows us to load custom vendor header data
+	public $misc_header_assets = null; //  this allows us to load custom vendor header data
 	
 	
 	
@@ -123,7 +123,7 @@ class asset_loader {
 	
 
 	/**
-	* This adds a labeled third party section of asset calls to the head
+	* This adds a labeled vendor section of asset calls to the head
 	*
 	*/
 	public function add_misc_header_assets($label, $string){
@@ -135,7 +135,7 @@ class asset_loader {
 
 	
 	/**
-	* This adds a labeled third party section of asset calls to the head
+	* This adds a labeled vendor section of asset calls to the head
 	*
 	*/
 	public function add_misc_header_top_assets($label, $string){
@@ -593,7 +593,7 @@ class asset_loader {
 							
 			
 
-			// peterdrinnan - Nov 20, 2012
+			// Nimmitha Vidyathilaka - Nov 20, 2012
 			// IF YOU ARE READING THIS YOU ARE IN THE DEEPEST BOWELS OF CODE HELL
 			// AND I HONESTLY APOLOGIZE FOR YOU HAVING TO BE HERE. PLEASE GO HAVE A BEER AFTER THIS SECTION.
 			// If you make a bogus asset call it will trigger a hidden reload of the same page for 
@@ -782,7 +782,7 @@ class asset_loader {
 	
 	
 	/**
-	* Rarely used but lets you shut off all asset loading. Useful for third party app views
+	* Rarely used but lets you shut off all asset loading. Useful for vendor app views
 	* @param bool TRUE FALSE
 	*/
 	public function block_all_assets($value = FALSE){
@@ -858,8 +858,8 @@ class asset_loader {
 	
 		$this->loaded_scripts = array();
 		$this->header_top_js = null;
-		$this->misc_header_top_assets = null; //  this allows us to load custom third party header data
-		$this->misc_header_assets = null; //  this allows us to load custom third party header data
+		$this->misc_header_top_assets = null; //  this allows us to load custom vendor header data
+		$this->misc_header_assets = null; //  this allows us to load custom vendor header data
 		$this->header_js = null;
 		$this->header_top_js_strings = null;
 		$this->header_js_strings = null;
@@ -879,8 +879,8 @@ class asset_loader {
 	
 		$this->loaded_styles = array();
 		
-		$this->misc_header_top_assets = null; //  this allows us to load custom third party header data
-		$this->misc_header_assets = null; //  this allows us to load custom third party header data
+		$this->misc_header_top_assets = null; //  this allows us to load custom vendor header data
+		$this->misc_header_assets = null; //  this allows us to load custom vendor header data
 	
 		$this->header_css = null;
 	
@@ -940,7 +940,7 @@ class asset_loader {
 		
 		$filetype = $this->get_extention($asset);
 		
-		$psfolders = array("public","core","themes","core_modules","custom_modules","third_party","widgets");
+		$psfolders = array("public","core","themes","core_modules","custom_modules","vendor","widgets");
 		
 
 		if(strpos($asset, "http://") !== false || strpos($asset, "https://") !== false ){
@@ -1131,7 +1131,7 @@ class asset_loader {
 	}
 	
 	/**
-	* Used to place third party component assets into very top of page heads
+	* Used to place vendor component assets into very top of page heads
 	*
 	*/
 	public function output_misc_header_top_assets()
@@ -1145,7 +1145,7 @@ class asset_loader {
 		
 			foreach($this->misc_header_top_assets AS $label => $asset_call_strings){
 			
-				$outbuf .= "\n	<!-- third party assets for {$label} --> \n";
+				$outbuf .= "\n	<!-- vendor assets for {$label} --> \n";
 				
 				$outbuf .= $asset_call_strings;
 				
@@ -1166,7 +1166,7 @@ class asset_loader {
 	
 	
 	/**
-	* Used to place third party component assets into page heads
+	* Used to place vendor component assets into page heads
 	*
 	*/
 	public function output_header_misc_assets()
@@ -1181,7 +1181,7 @@ class asset_loader {
 		
 			foreach($this->misc_header_assets AS $label => $asset_call_strings){
 			
-				$outbuf .= "\n	<!-- third party assets for {$label} --> \n";
+				$outbuf .= "\n	<!-- vendor assets for {$label} --> \n";
 				
 				$outbuf .= $asset_call_strings;
 				

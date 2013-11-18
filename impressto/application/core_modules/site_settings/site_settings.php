@@ -3,7 +3,7 @@
 /**
 * This is called by the hooks as a post_controller_constructor
 *
-* peterdrinnan - some of this stuff should be coming from the CI config but for now ... 
+* Nimmitha Vidyathilaka - some of this stuff should be coming from the CI config but for now ... 
 *
 */
 function initiate(){

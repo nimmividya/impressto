@@ -6,7 +6,7 @@ class mUsers extends CI_Model{
 	
 			
 		$sql = "SELECT id AS id, username AS username, password AS password,";
-		$sql .= " email_address AS email_address, role AS role ";
+		$sql .= " email AS email, role AS role ";
 		$sql .= " FROM {$this->db->dbprefix}users ORDER BY id ASC ";		
 		
 		$query = $this->db->query($sql);

@@ -512,7 +512,7 @@ class site_search_model extends MY_Model{
 
 	/**
 * reduce the leading and trailing portions of search result excerpts
-* @author - peterdrinnan
+* @author - Nimmitha Vidyathilaka
 * @param string $input text to trim
 * @param string $term test that is being highlighted
 * @param int $keypos location of found term in string

@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: edit.php
 @Description: edit a page and assign seo and admin rights
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

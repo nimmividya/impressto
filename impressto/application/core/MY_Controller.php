@@ -67,6 +67,8 @@ class PSFront_Controller extends PSBase_Controller {
 	
 			$sql = "UPDATE {$this->db->dbprefix}content_{$this->language} SET hits = hits + 1 WHERE CO_Node = '{$this->page_id}'";
 			$this->db->query($sql);
+			
+			//echo $sql;
 		
 		}
 	

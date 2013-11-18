@@ -36,7 +36,7 @@ class admin_blog extends PSAdmin_Controller {
 	* @see http://codeigniter.com/user_guide/general/urls.html
 	*/
 	public function index(){
-				
+					
 		is_logged_in();
 			
 		$this->load->library('asset_loader');
@@ -44,7 +44,7 @@ class admin_blog extends PSAdmin_Controller {
 		$this->load->library('template_loader');
 				
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/custom_modules/admin_blog/js/blog_manager.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery.popupwindow.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/jquery/plugins/jquery.popupwindow.js");
 	
 
 		
@@ -157,6 +157,9 @@ class admin_blog extends PSAdmin_Controller {
 		
 		$site_settings = $this->site_settings_model->get_settings();
 		
+		$data['ng_app_name'] =  "admin_blog";
+			
+		
 		
 		
 		$data['data'] = $data; // Alice in Wonderland shit here!
@@ -192,10 +195,8 @@ class admin_blog extends PSAdmin_Controller {
 	*
 	*/
 	public function edit($blog_id = ''){
-	
-	
-		is_logged_in();
 		
+		is_logged_in();
 		
 		$this->load->library('asset_loader');
 		$this->load->library('edittools');
@@ -214,9 +215,9 @@ class admin_blog extends PSAdmin_Controller {
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/custom_modules/admin_blog/js/blog_manager.js");
 
-		$this->asset_loader->add_header_js("/default/vendor/jquery/jquery.validate.min.js");
+		$this->asset_loader->add_header_js("/default/vendor/jquery/plugins/validate/jquery.validate.min.js");
 		
-		$this->asset_loader->add_header_js("/default/vendor/jquery.popupwindow.js");
+		$this->asset_loader->add_header_js("/default/vendor/jquery/plugins/jquery.popupwindow.js");
 	
 
 	
@@ -314,7 +315,10 @@ class admin_blog extends PSAdmin_Controller {
 		$data['blogmanager_header'] = $this->load->view('blogmanager_header', $data, TRUE);
 		
 		
-		//$data['main_content'] = 'edit';		
+		//$data['main_content'] = 'edit';	
+
+		$data['ng_app_name'] =  "admin_blog";
+		
 
 				
 		$data['parsedcontent'] = $this->load->view('edit', $data, TRUE); 
@@ -337,7 +341,9 @@ class admin_blog extends PSAdmin_Controller {
 	*  forget this , it should be a widget
 	*
 	*/
-	public function showblogitem(){
+	public function showblogitem(){		
+
+		
 		$this->load->view('showblogitem');
 	}
 	
@@ -354,7 +360,7 @@ class admin_blog extends PSAdmin_Controller {
 	*/
 	public function install(){
 	
-		
+			
 		is_logged_in();
 		
 		$this->load->library('module_installer');
@@ -380,7 +386,7 @@ class admin_blog extends PSAdmin_Controller {
 	public function uninstall(){
 	
 	
-			
+				
 		is_logged_in();
 		
 		
@@ -389,7 +395,7 @@ class admin_blog extends PSAdmin_Controller {
 	
 	/**
 	* This is a standard function that is called from the search module to obtain the correct url for searchable items
-	* @author peterdrinnan 
+	* @author Nimmitha Vidyathilaka 
 	*/
 	public function search_module_url($route, $data){
 	

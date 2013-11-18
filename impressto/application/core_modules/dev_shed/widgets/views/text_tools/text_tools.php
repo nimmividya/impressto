@@ -2,7 +2,7 @@
 @Name: text tools
 @Description: text manipulation and cleanup
 @Type: PHP
-@Author: peter drinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.0
 @Status: development

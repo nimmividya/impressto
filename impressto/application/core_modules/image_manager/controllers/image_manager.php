@@ -46,7 +46,7 @@ class image_manager extends PSAdmin_Controller {
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/image_manager/js/jquery.form.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/image_manager/js/jquery.MultiFile.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/image_manager/js/image_manager.js");
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/image_manager/js/jquery.Jcrop.js");
+		$this->asset_loader->add_header_js(vendor/jquery/plugins/jquery.Jcrop.js");
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/image_manager/js/tmpl.min.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/image_manager/js/load-image.min.js");

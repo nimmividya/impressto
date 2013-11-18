@@ -5,7 +5,7 @@
 @Filename: widget_list.php
 @Lang: 
 @Description: Simple shows a list of all the site widgets
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Status: complete
 @Date: 2012-06-18

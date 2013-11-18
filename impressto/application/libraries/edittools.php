@@ -105,7 +105,7 @@ class edittools {
 			
 			$CI->load->library('asset_loader');
 			
-			$CI->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/tiny_mce/tiny_mce.js");
+			$CI->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/xtras/tiny_mce/tiny_mce.js");
 			
 			if($config['toolbar'] == "Full") $tinyclass = "mceAdvanced";
 			else $tinyclass = "mceSimple";
@@ -132,7 +132,7 @@ class edittools {
 			if(!$CI->config->item('ckeditor_object')){
 
 				// need to make sure we only declare this object once
-				require_once getenv("DOCUMENT_ROOT") .'/'.PROJECTNAME.'/third_party/ckeditor/ckeditor.php' ;
+				require_once getenv("DOCUMENT_ROOT") .'/'.PROJECTNAME.'/vendor/ckeditor/ckeditor.php' ;
 				$ckeditor = new CKEditor( );
 				
 				$CI->config->set_item('ckeditor_object',$ckeditor);
@@ -141,7 +141,7 @@ class edittools {
 			
 			$ckeditor = & $CI->config->item('ckeditor_object');
 			
-			$ckeditor->basePath	= '/'.PROJECTNAME.'/third_party/ckeditor/';
+			$ckeditor->basePath	= '/'.PROJECTNAME.'/vendor/ckeditor/';
 			$ckeditor->config['filebrowserBrowseUrl'] = '/file_browser/';
 			$ckeditor->config['filebrowserImageBrowseUrl'] = '/file_browser/';
 			$ckeditor->config['filebrowserFlashBrowseUrl'] = '/file_browser/';

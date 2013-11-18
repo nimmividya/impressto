@@ -1,7 +1,7 @@
 
 .navbar-inner {
-    background-color: #43ACCC;
-    background-image: linear-gradient(to bottom, #60CBEE, #43ACCC);
+    background-color: #F08228;
+    background-image: linear-gradient(to bottom, #EE9F5E, #F08228);
     background-repeat: repeat-x;
     border: 1px solid #D4D4D4;
     border-radius: 3px 3px 3px 3px;
@@ -12,3 +12,5 @@
 .well {
     padding: 0;
 }
+
+

@@ -13,12 +13,12 @@
 		$this->load->library('asset_loader');
 		
 		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/default/themes/liquid/css/style.css","","screen");
-		$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap.css","","screen");
-		$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap-responsive.css","","screen");
-		$this->asset_loader->add_header_css("third_party/font-awesome/css/font-awesome.css","","all");
+		$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap.css","","screen");
+		$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap-responsive.css","","screen");
+		$this->asset_loader->add_header_css("core/css/font-awesome/css/font-awesome.css","","all");
 		
 		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/default/themes/liquid/css/blue.css","","screen");
-		$this->asset_loader->add_header_css("default/third_party/qtip2/jquery.qtip.css","","screen");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/qtip2/jquery.qtip.css","","screen");
 		
 		
 		
@@ -158,9 +158,9 @@
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/themes/liquid/js/jquery.min.js");
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/themes/liquid/js/jquery.actual.min.js");
-		$this->asset_loader->add_header_js("default/third_party/validation/jquery.validate.min.js");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/validate/jquery.validate.min.js");
 		//$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/themes/liquid/js/gebo_validation.js","","all");
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap.min.js");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap.min.js");
 		
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/core/js/appclass.js");		

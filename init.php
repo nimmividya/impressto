@@ -6,12 +6,12 @@ define('ENVIRONMENT', 'development');
 
 define('APPSERIES', '2'); // this is the framework model number, not to be confused with version number
 
-define('PROJECTNUM', '12345');
+define('PROJECTNUM', '101');
 
 define('PROJECTNAME', 'impressto');
 
-define('VENDOR', 'Nimmi');
-define('VENDORURL', 'http:www.google.com');
+define('VENDOR', 'Peter');
+define('VENDORURL', 'http://www.pdvictor.com');
 
 
 define('ASSETURL', '/assets/');

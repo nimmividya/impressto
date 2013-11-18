@@ -3,14 +3,14 @@
 @Type: PHP
 @Filename: simple
 @Projectnum: 4660
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Status: complete
 @Date: 2012-02
 -->
 
 <div class="tagger_wrapper">
 
-<img alt="tags" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/themes/liquid/samples/img/gCons/tag.png" />
+<img alt="tags" src="<?php echo ASSETURL . PROJECTNAME; ?>/default/core/img/tag.png" />
 <span>Enter new tags below.</span>
 
 <div style="clear:both"></div>

@@ -18,7 +18,7 @@ function init_my_tinyMCE(lang){
 		
 		language : lang,
 		
-		
+		convert_urls: false,
 		cleanup : false,
 		cleanup_on_startup : false,
 

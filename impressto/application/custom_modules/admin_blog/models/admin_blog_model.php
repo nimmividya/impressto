@@ -229,10 +229,16 @@ class admin_blog_model extends My_Model{
 			$content_data['lang'] = $langcode;
 	
 
-			$content_data['slug'] = $moduleoptions['admin_blog_page_'.$langcode]."?blog_id=".$content_data['content_id']; 
+			if(isset($moduleoptions['admin_blog_page_'.$langcode])){
 			
-		
-			$content_data['slug'] = str_replace("/{$langcode}/","",$content_data['slug']);	
+				$content_data['slug'] = $moduleoptions['admin_blog_page_'.$langcode]."?blog_id=".$content_data['content_id']; 
+				$content_data['slug'] = str_replace("/{$langcode}/","",$content_data['slug']);	
+			
+			}else{
+			
+				// should really throw an error here so the user knows something is fucked.
+				$content_data['slug'] =  "";							
+			}
 			
 			$this->edittools->addsearchindex($content_data);
 			
@@ -417,7 +423,7 @@ class admin_blog_model extends My_Model{
 		
 		$sql = "SELECT username ";
 		$sql .= " FROM {$this->db->dbprefix}users ";
-		$sql .= " WHERE user_id='{$user_id}'";
+		$sql .= " WHERE id='{$user_id}'";
 	
 		$query = $this->db->query($sql);
 		

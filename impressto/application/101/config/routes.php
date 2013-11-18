@@ -40,7 +40,7 @@
 
 
 $route['en'] = "index/index";
-// peterdrinnan - april 25, 2012
+// Nimmitha Vidyathilaka - april 25, 2012
 $route['fr'] = "index/index/";
 
 // this nasty routing does allow us to have 5 levels of "directory style" urls

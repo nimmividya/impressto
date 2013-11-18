@@ -5,7 +5,7 @@
 @Filename: developer_box.php
 @Lang: 
 @Description: Simple box for holding collaboration widgets
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 
 @Status: development

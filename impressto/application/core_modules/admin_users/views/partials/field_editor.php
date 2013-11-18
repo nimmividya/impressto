@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: manager.php
 @Description: Form field management interface
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

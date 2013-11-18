@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: blogmanager.php
 @Description: backend admin listing page for all blog items
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete
@@ -12,7 +12,7 @@
 */
 ?>
 
-<div class="admin-box">
+<div class="admin-box" ng-controller="ps_blogmanager.blogCtrl">
 <h3>Blog Manager</h3>
 <?php 
 
@@ -104,7 +104,7 @@ $request_uri = getenv("REQUEST_URI");
 
 <h3 style="float:left">Widgets</h3>
 
-<button type="button" style="float:right" onclick="ps_blogmanager.newwidget()" class="btn btn-default"><i class="icon-white icon-star"></i> New Widget</button>
+<button type="button" style="float:right" ng-click="newwidget()" class="btn btn-default"><i class="icon-white icon-star"></i> New Widget</button>
 
 </div>
 

@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: site_settings_view.php
 @Description: general settings page for the site
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

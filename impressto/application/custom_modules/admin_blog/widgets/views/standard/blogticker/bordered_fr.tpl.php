@@ -1,7 +1,7 @@
 <!--
 @Name: Bordered
 @Type: PHP
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 4660
 @Version: 1.2
 @Status: complete

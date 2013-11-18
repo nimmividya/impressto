@@ -34,11 +34,11 @@ class module_utils{
 	public function get_modules(){
 		
 		
-		$CI =& get_instance();
+		//$CI =& get_instance();
 		
-		$CI->load->helper('directory');
+		$this->CI->load->helper('directory');
 		
-		$projectnum = $CI->config->item('projectnum');
+		$projectnum = $this->CI->config->item('projectnum');
 		
 		
 		$module_states = array();
@@ -46,7 +46,7 @@ class module_utils{
 		
 		//$CI->db->order_by("name", "desc");
 		
-		$query = $CI->db->get('modules');
+		$query = $this->CI->db->get('modules');
 		
 		
 		foreach ($query->result() as $row)
@@ -124,8 +124,8 @@ class module_utils{
 										
 										// add the new;y found module but do not activate it.
 										$data = array('name' => $file,'active' => 'N');
-										$CI->db->insert('modules', $data); 
-										$module_ids[$file] = $CI->db->insert_id();
+										$this->CI->db->insert('modules', $data); 
+										$module_ids[$file] = $this->CI->db->insert_id();
 										$module_states[$file] = 'N';
 										
 									}
@@ -193,6 +193,32 @@ class module_utils{
 		
 	}
 	
+	/**
+	 * Get Modules
+	 *
+	 */
+	public function get_all()
+	{
+	
+		//$CI =& get_instance();
+
+		$modules = array();
+
+		$this->CI->db->where('active', 'Y');
+
+		$result = $this->CI->db->get("modules")->result();
+
+		foreach ($result as $row)
+		{
+
+			$modules[$row->name] = $row->name;
+		}
+		
+		ksort($modules);
+
+		return array_values($modules);
+	}
+
 	
 	
 
@@ -204,7 +230,7 @@ class module_utils{
 
 		
 		// check if the widget is in the table. if it is get the id otherwise insert it and get the id
-		$sql = "SELECT widget_id FROM ps_modules WHERE module = '{$module}' AND widget = '{$widget}' AND instance = '{$instance_name}' ";
+		$sql = "SELECT widget_id FROM {$this->CI->db->dbprefix}modules WHERE module = '{$module}' AND widget = '{$widget}' AND instance = '{$instance_name}' ";
 		
 		$query = $this->CI->db->query($sql);
 		
@@ -230,7 +256,7 @@ class module_utils{
 			
 			if($new_instance_name != "" && $new_instance_name != $instance_name) $instance_name = $new_instance_name;
 			
-			$sql = "INSERT INTO {$CI->db->dbprefix}widgets SET module = '{$module}', widget = '{$widget}', instance = '{$instance_name}'";
+			$sql = "INSERT INTO {$this->CI->db->dbprefix}widgets SET module = '{$module}', widget = '{$widget}', instance = '{$instance_name}'";
 			$this->CI->db->query($sql);
 			
 			$widget_id =  $this->CI->db->insert_id() ; 

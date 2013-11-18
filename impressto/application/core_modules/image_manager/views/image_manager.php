@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: image_manager.php
 @Description: management interface for images
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

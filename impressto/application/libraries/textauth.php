@@ -6,25 +6,45 @@
 * @package		textauth
 * @author		Glynn Williams <gwilliams44@gmail.com>
 * @description Assists in validating and setting user sessions.
+
+
+* In order for this to work you will need to add a config file to the CI root config folder named "textauth.php"
+* Add the following value to textauth.php
+*
+*   $config['textauth_user'] = "____";
+*   $config['textauth_pass'] = "_____";
+*   $config['textauth_user_email'] = "________________";
+*   $config['textauth_role'] = "administrator";
+*   $config['textauth_user_id'] = 1;
+*   $config['textauth_default_page'] = "______";
+*
 *
 */
-
 
 class textauth {
 	
 	var $user_session_folder; 
-
+	var $local_textauthfile; 
+	
 	public function __construct()
 	{
 		
 		$CI =& get_instance();
 		
 		$this->user_session_folder = $CI->config->item('user_sessions_dir');
+		$this->local_textauthfile = $this->user_session_folder . "textauth.txt";
 		
 		if(!file_exists($this->user_session_folder)){
 			
 			$CI->load->library("file_tools");
 			$CI->file_tools->create_dirpath($this->user_session_folder);
+			
+		}
+		
+		if(!file_exists($this->local_textauthfile)){
+			
+			$fp = fopen($this->local_textauthfile, 'w');
+			fclose($fp);
 			
 		}
 		
@@ -66,20 +86,39 @@ class textauth {
 
 
 		$CI =& get_instance();
+		
+		$textauth_session_id = file_get_contents($this->local_textauthfile);
+
+		// only allow one person to be logged in at a time.
+		if($textauth_session_id != $CI->session->userdata('textauth_session_id')){
+		
+			$CI->session->sess_destroy();
+			
+			//echo "problem with session_id   : {$textauth_session_id} != {$CI->session->userdata('textauth_session_id')} ";
+			return FALSE;
+		}				
 	
 		$is_logged_in = $CI->session->userdata('is_logged_in');
 		
+		
+		$cis = $CI->session->userdata;
+		
+		//print_r($cis);
+		
+		//echo 
 		//$is_logged_in = FALSE; // debug
 		
 		if(!isset($is_logged_in) || $is_logged_in != true)
 		{
 			
 			// FAILSAFE TEST BEFORE KICKING THE USER OUT
-			// check the /appname/sessions/ directory for a sesion id matching the users pskey cookie
+			// check the /appname/usr_sessions/ directory for a sesion id matching the users pskey cookie
 			// if the key sesion file exists, read it and decrypt the username and password, then do a authentication check
 			//of the authenticatio passes, set the local session and continue
 
 			$sessiondata = $this->cookie_session_validate();
+			
+			print_r($sessiondata);
 			
 			if($sessiondata){
 				
@@ -126,11 +165,33 @@ class textauth {
 		
 		if($data) // if the user's credentials validated...
 		{
+		
+			// wipe out the previous session
+			//$CI->session->sess_destroy();
+					
+			// now create a new one
+			//$CI->session->sess_create();
+			
+						
 
 			$data['user_group'] = "";
 			$data['authtype'] = "";
 			
+			// we will wipe out any previous sessions here to prevent more than
+			// one person from being logged in at the same time with the same
+			// account
+			
+			$textauth_session_id = uniqid($CI->input->ip_address(), TRUE);
+			
+			$data['textauth_session_id'] = $textauth_session_id;
+			
+						
 			$CI->session->set_userdata($data);
+			
+			//store a local copy to prevent more than one user being logged in at once
+			file_put_contents($this->local_textauthfile, $textauth_session_id);
+				
+				
 			
 			$config = $CI->config->load('textauth', TRUE);
 						
@@ -138,16 +199,18 @@ class textauth {
 			
 				'username' => $config['textauth_user'],
 				'password' => $config['textauth_pass'],
-				'session_id'  => $CI->session->userdata('session_id'),
+				'textauth_session_id'  => $textauth_session_id,
 			
 			);
-			
+
+			/*
 			$rememberme = $CI->input->post('rememberme');
 			
 			$user_session_data['persist'] = ($rememberme == "rememberme") ?  true : false;
 			
 			// this is used to pick up sessions that are to be resumed
 			$this->set_persistent_session_cookie($user_session_data);
+			*/
 			
 			if($request_uri == "") $request_uri = $config['textauth_default_page'];
 								
@@ -200,8 +263,8 @@ class textauth {
 				$sessiondata  = unserialize($sessiondata);
 				
 				
-				$CI->db->where('username', $sessiondata['username']);
-				$CI->db->where('password', $sessiondata['password']);
+				$CI->db->where('usr_username', $sessiondata['username']);
+				$CI->db->where('usr_password', $sessiondata['password']);
 				
 				$query = $CI->db->get("{$CI->db->dbprefix}users");
 				
@@ -341,13 +404,13 @@ class textauth {
 			
 		}else{
 			
-			$query = $CI->db->get_where("users", array("email_address"=>$email));
+			$query = $CI->db->get_where("users", array("usr_email_address"=>$email));
 			
 			if ($query->num_rows() > 0){
 				
 				$row = $query->row(); 
 				
-				$password = $CI->encrypt->decode($row->password);	
+				$usr_password = $CI->encrypt->decode($row->usr_password);	
 				
 				$return_array['msg'] = "Success! Your password has been emailed to you.";
 				
@@ -363,7 +426,7 @@ class textauth {
 				$CI->email->to($email);
 				
 				$CI->email->subject("Password recovery {$domain}");
-				$CI->email->message("Your password is {$password}");
+				$CI->email->message("Your password is {$usr_password}");
 				$CI->email->send();
 				
 				

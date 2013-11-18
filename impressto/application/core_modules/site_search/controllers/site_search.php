@@ -168,8 +168,16 @@ class site_search extends PSBase_Controller {
 	
 		$this->load->helper('im_helper');
 	
-				
-		$saveoptions['search_page'] = $this->input->post('search_page');
+		$lang_avail = $this->config->item('lang_avail');
+					
+
+		foreach($lang_avail AS $langcode=>$language){
+
+			$saveoptions['search_page_' .$langcode] = $this->input->post('search_page_' . $langcode);
+		
+		}		
+		
+		
 		$saveoptions['search_template'] = $this->input->post('search_template');
 		$saveoptions['sortmethod'] = $this->input->post('sortmethod');
 		$saveoptions['listings_per_page'] = $this->input->post('listings_per_page');
@@ -180,8 +188,7 @@ class site_search extends PSBase_Controller {
 		
 		if(is_array($content_filters)) $saveoptions['content_filters'] = serialize($content_filters);
 		
-			
-				
+							
 		ps_savemoduleoptions('site_search',$saveoptions);
 		
 

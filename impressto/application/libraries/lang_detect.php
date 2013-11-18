@@ -183,7 +183,7 @@ class lang_detect
 		// store the language code too
 		$this->obj->config->set_item('lang_selected', $lang);
 		
-		//peterdrinnan - added august 20, 2012
+		//Nimmitha Vidyathilaka - added august 20, 2012
 		$lang_avail = $this->obj->config->item('lang_avail');
 		$this->obj->config->set_item('language', $lang_avail[$lang]); 
 		$this->obj->config->set_item('lang_selected', $lang); 

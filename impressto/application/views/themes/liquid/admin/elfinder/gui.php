@@ -20,87 +20,87 @@
 
 		
 		
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/common.css"      type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/dialog.css"      type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/toolbar.css"     type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/navbar.css"      type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/statusbar.css"   type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/contextmenu.css" type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/cwd.css"         type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/quicklook.css"   type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/commands.css"    type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/common.css"      type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/dialog.css"      type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/toolbar.css"     type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/navbar.css"      type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/statusbar.css"   type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/contextmenu.css" type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/cwd.css"         type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/quicklook.css"   type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/commands.css"    type="text/css">
 
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/fonts.css"       type="text/css">
-	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/css/theme.css"       type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/fonts.css"       type="text/css">
+	<link rel="stylesheet" href="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/css/theme.css"       type="text/css">
 
 	<!-- elfinder core -->
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/elFinder.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/elFinder.version.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/jquery.elfinder.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/elFinder.resources.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/elFinder.options.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/elFinder.history.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/elFinder.command.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/elFinder.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/elFinder.version.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/jquery.elfinder.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/elFinder.resources.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/elFinder.options.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/elFinder.history.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/elFinder.command.js"></script>
 
 	<!-- elfinder ui -->
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/overlay.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/workzone.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/navbar.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/dialog.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/tree.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/cwd.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/toolbar.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/button.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/uploadButton.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/viewbutton.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/searchbutton.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/sortbutton.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/panel.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/contextmenu.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/path.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/stat.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/ui/places.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/overlay.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/workzone.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/navbar.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/dialog.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/tree.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/cwd.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/toolbar.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/button.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/uploadButton.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/viewbutton.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/searchbutton.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/sortbutton.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/panel.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/contextmenu.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/path.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/stat.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/ui/places.js"></script>
 
 	<!-- elfinder commands -->
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/back.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/forward.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/reload.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/up.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/home.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/copy.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/cut.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/paste.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/open.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/rm.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/info.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/duplicate.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/rename.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/help.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/getfile.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/mkdir.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/mkfile.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/upload.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/download.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/edit.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/quicklook.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/quicklook.plugins.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/extract.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/archive.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/search.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/view.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/resize.js"></script>
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/sort.js"></script>	
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/commands/netmount.js"></script>	
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/back.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/forward.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/reload.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/up.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/home.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/copy.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/cut.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/paste.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/open.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/rm.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/info.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/duplicate.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/rename.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/help.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/getfile.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/mkdir.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/mkfile.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/upload.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/download.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/edit.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/quicklook.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/quicklook.plugins.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/extract.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/archive.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/search.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/view.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/resize.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/sort.js"></script>	
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/commands/netmount.js"></script>	
 
 	<!-- elfinder languages -->
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/i18n/elfinder.en.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/i18n/elfinder.en.js"></script>
 
 
 	<!-- elfinder dialog -->
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/jquery.dialogelfinder.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/jquery.dialogelfinder.js"></script>
 
 	<!-- elfinder 1.x connector API support -->
-	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/third_party/elfinder/js/proxy/elFinderSupportVer1.js"></script>
+	<script src="<?php echo ASSETURL . PROJECTNAME; ?>/default/vendor/xtras/elfinder/js/proxy/elFinderSupportVer1.js"></script>
 
 	<!-- elfinder custom extenstions -->
 	

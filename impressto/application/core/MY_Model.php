@@ -19,7 +19,7 @@ class MY_Model extends CI_Model
 	}
 	
 	/**
-	* @author peterdrinnan
+	* @author Nimmitha Vidyathilaka
 	*
 	*/
 	function fetch_row($query) {

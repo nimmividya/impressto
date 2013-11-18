@@ -79,7 +79,7 @@ class MX_Loader extends CI_Loader
 	/** Load a module config file **/
 	public function config($file = '', $use_sections = FALSE, $fail_gracefully = FALSE, $module = NULL) {
 		
-		if($module) $this->_module = $module; // peterdrinnan - this a a forced module call for sparks packages
+		if($module) $this->_module = $module; // Nimmitha Vidyathilaka - this a a forced module call for sparks packages
 		
 		return CI::$APP->config->load($file, $use_sections, $fail_gracefully, $this->_module);
 			
@@ -125,7 +125,7 @@ class MX_Loader extends CI_Loader
 
 		if (is_array($langfile)) return $this->languages($langfile);
 
-		// peterdrinnan - looks like a fuckup below. Fourth parameter is wrong.
+		// Nimmitha Vidyathilaka - looks like a fuckup below. Fourth parameter is wrong.
 		//return CI::$APP->lang->load($langfile, $lang, $return, $this->_module);
 		
 		return CI::$APP->lang->load($langfile, $lang, $return);
@@ -144,7 +144,7 @@ class MX_Loader extends CI_Loader
 
 		$class = strtolower(end(explode('/', $library)));
 		
-		// peterdrinnan patched this so it will not throw errors		
+		// Nimmitha Vidyathilaka patched this so it will not throw errors		
 		if (isset($this->_ci_classes[$class]) AND $_alias = $this->_ci_classes[$class])
 			if(isset(CI::$APP->$_alias)) return CI::$APP->$_alias;
 
@@ -174,7 +174,7 @@ class MX_Loader extends CI_Loader
 		}
 
 	
-		// peterdrinnan patched this so it will not throw errors		
+		// Nimmitha Vidyathilaka patched this so it will not throw errors		
 		if(isset($APP->$_alias)) return CI::$APP->$_alias;
 		else return FALSE;
 		
@@ -217,7 +217,7 @@ class MX_Loader extends CI_Loader
 
 		include_once($autoload_path);
 		
-		// peterdrinnan
+		// Nimmitha Vidyathilaka
 		// for some unknown reason the _module var is changing back to what it was before this call. 
 		// we therefore have to force the module variable
 		$this->load->_autoloader($autoload, $this->_module); 
@@ -370,7 +370,7 @@ class MX_Loader extends CI_Loader
 
 		$path = FALSE;
 	
-		if($module) $this->_module = $module; // peterdrinnan - this a a forced module call for sparks packages
+		if($module) $this->_module = $module; // Nimmitha Vidyathilaka - this a a forced module call for sparks packages
 
 		if ($this->_module)
 			list($path, $file) = Modules::find('autoload', $this->_module, 'config/');

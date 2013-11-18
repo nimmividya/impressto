@@ -125,7 +125,7 @@ class MX_Router extends CI_Router
 		
 		
 	
-		/* peterdrinnan - load the docket version of the default controller if it exists */
+		/* Nimmitha Vidyathilaka - load the docket version of the default controller if it exists */
 		if (is_file( APPPATH. $this->config->item('projectnum') . '/controllers/'.$module.$ext)) {
 
 			$this->directory = "../" . $this->config->item('projectnum') .'/controllers/';

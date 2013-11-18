@@ -14,7 +14,7 @@ class Page_Manager extends PSAdmin_Controller {
 
 		$this->load->helper('auth');
 							
-		is_logged_in();
+
 		
 		$this->benchmark->mark('code_start');
 					
@@ -40,7 +40,7 @@ class Page_Manager extends PSAdmin_Controller {
 	*/
 	public function index($lang = 'en'){
 		
-		
+		is_logged_in();
 		
 		$user_session_data = $this->session->all_userdata();	
 		$data['user_role'] = $user_session_data['role']; 
@@ -82,23 +82,23 @@ class Page_Manager extends PSAdmin_Controller {
 			
 		$this->asset_loader->add_header_css("default/core_modules/page_manager/css/page_manager{$file_version_tag}.css");						
 		
-		//$this->asset_loader->add_header_css("default/third_party/contextmenu/css/jquery.contextmenu.css");		
-		//$this->asset_loader->add_header_js("default/third_party/contextmenu/js/jquery.contextmenu.js");
+		//$this->asset_loader->add_header_css("default/vendor/jquery/plugins/contextmenu/css/jquery.contextmenu.css");		
+		//$this->asset_loader->add_header_js("default/vendor/jquery/plugins/contextmenu/js/jquery.contextmenu.js");
 
 
 		
-		$this->asset_loader->add_header_css("default/third_party/contextmenu/css/jquery.contextMenu.css");			
-		$this->asset_loader->add_header_js("default/third_party/contextmenu/js/jquery.ui.position.js");
-		$this->asset_loader->add_header_js("default/third_party/contextmenu/js/jquery.contextMenu.js");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/contextmenu/css/jquery.contextMenu.css");			
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/contextmenu/js/jquery.ui.position.js");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/contextmenu/js/jquery.contextMenu.js");
 		
 				
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/jquery.markitup.js");		
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/jquery.markitup.js");		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/page_manager/js/markitup_set.js");		
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/skins/markitup/style.css");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/skins/markitup/style.css");
 		
 		// used for wysiwyg toggle
-		$this->asset_loader->add_header_css("default/third_party/ibutton/css/jquery.ibutton.css");
-		$this->asset_loader->add_header_js("default/third_party/ibutton/js/jquery.ibutton.js");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/ibutton/css/jquery.ibutton.css");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/ibutton/js/jquery.ibutton.js");
 		
 		
 
@@ -160,6 +160,8 @@ class Page_Manager extends PSAdmin_Controller {
 	*/
 	public function copy($lang='en', $node_id){
 	
+		is_logged_in();
+			
 		$this->edit($lang, $node_id, null, TRUE);
 		
 		
@@ -180,6 +182,8 @@ class Page_Manager extends PSAdmin_Controller {
 	*/
 	public function edit($lang='en', $node_id = '', $parent_id = null, $cloning = FALSE){
 				
+		is_logged_in();
+			
 		global $_SESSION;
 		
 		$this->load->library('asset_loader');
@@ -202,14 +206,14 @@ class Page_Manager extends PSAdmin_Controller {
 		if($module_version) $file_version_tag = "." . $module_version;
 		
 		
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/skins/markitup/style.css");
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/third_party/mincolors/jquery.miniColors.css");
-		$this->asset_loader->add_header_css("default/third_party/uniform/Aristo/uniform.aristo.css");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/skins/markitup/style.css");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/mincolors/jquery.miniColors.css");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/uniform/Aristo/uniform.aristo.css");
 
-		$this->asset_loader->add_header_css("default/third_party/uniform/Aristo/uniform.aristo.css");
-		$this->asset_loader->add_header_css("default/third_party/uniform/Aristo/uniform.aristo.css");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/uniform/Aristo/uniform.aristo.css");
+		$this->asset_loader->add_header_css("default/vendor/jquery/plugins/uniform/Aristo/uniform.aristo.css");
 
-		$this->asset_loader->add_header_css("third_party/bootstrap/css/bootstrap-wysihtml.css");
+		$this->asset_loader->add_header_css("vendor/bootstrap/css/bootstrap-wysihtml.css");
 		
 
 
@@ -219,19 +223,20 @@ class Page_Manager extends PSAdmin_Controller {
 
 
 	
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/jquery.markitup.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/jquery.markitup.js");
 
 
 		
 
-		$this->asset_loader->add_header_js("third_party/jquery.popupwindow.js");
+		$this->asset_loader->add_header_js("vendor/jquery/plugins/jquery.popupwindow.js");
 
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/mincolors/jquery.miniColors.js");
-		$this->asset_loader->add_header_js("default/third_party/uniform/jquery.uniform.min.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/mincolors/jquery.miniColors.js");
+		$this->asset_loader->add_header_js("default/vendor/jquery/plugins/uniform/jquery.uniform.min.js");
 		
-		$this->asset_loader->add_header_js("third_party/bootstrap/js/wysihtml5.js"); // this is the core wysiwyg library from Christopher Blum
-		$this->asset_loader->add_header_js("third_party/bootstrap/js/bootstrap-wysihtml5.js"); // this is the extended, prettified version from James Hollingworth
-
+		$this->asset_loader->add_header_js("vendor/bootstrap/lib/wysihtml5/wysihtml5.js"); // this is the core wysiwyg library from Christopher Blum
+		$this->asset_loader->add_header_js("vendor/bootstrap/lib/wysihtml5/bootstrap-wysihtml5.js"); // this is the extended, prettified version from James Hollingworth
+		$this->asset_loader->add_header_css("vendor/bootstrap/lib/wysihtml5/style.css.css");	
+		
 		
 		$this->asset_loader->add_header_js("core_modules/page_manager/js/markitup_set{$file_version_tag}.js");				
 		$this->asset_loader->add_header_js("core_modules/page_manager/js/ps_content_edit{$file_version_tag}.js");	
@@ -266,7 +271,7 @@ class Page_Manager extends PSAdmin_Controller {
 		
 		}else{
 		
-			// peterdrinnan - Dev 14, 2102
+			// Nimmitha Vidyathilaka - Dev 14, 2102
 			// convert any special characters so they can be seen as code in the editor
 			$contentdata['CO_seoTitle'] = htmlspecialchars($contentdata['CO_seoTitle'],ENT_NOQUOTES); 
 			if(isset($contentdata['CO_Body'])) $contentdata['CO_Body'] = htmlspecialchars($contentdata['CO_Body'],ENT_NOQUOTES); 
@@ -484,7 +489,7 @@ class Page_Manager extends PSAdmin_Controller {
 	*/
 	public function install(){
 	
-	
+		is_logged_in();
 
 		$this->load->library('module_installer');
 		
@@ -524,7 +529,8 @@ class Page_Manager extends PSAdmin_Controller {
 	*/	
 	public function delete($item_id){
 
-	
+		is_logged_in();
+		
 		$this->madmincontent->deletecontent($item_id);
 		
 		Events::trigger('page_manager_delete', $item_id);
@@ -541,6 +547,8 @@ class Page_Manager extends PSAdmin_Controller {
 	public function savedraft(){
 		
 
+		is_logged_in();
+				
 		// if the page_id = nul, it means there is no liv epage yet so this page will be saves in the dradt table,
 		// and in the live table as an inacitve record and in the node table too
 		
@@ -691,6 +699,8 @@ class Page_Manager extends PSAdmin_Controller {
 	*
 	*/
 	public function save(){
+		
+		is_logged_in();
 		
 		$returnarray = array();
 		
@@ -871,7 +881,7 @@ class Page_Manager extends PSAdmin_Controller {
 		// this launches event triggers. 
 		// See: http://kb.central.bitheads.ca/index.php?action=artikel&cat=20&id=4
 		// Example file in /appname/application/custom_modules/top_banners/events.php
-		// NOTE: June 16, 2012 - peterdrinnan - This may be soon replaced with a generic trigger call
+		// NOTE: June 16, 2012 - Nimmitha Vidyathilaka - This may be soon replaced with a generic trigger call
 		// once the trigger manager is setup
 		// would look like $this->triggers->trigger('page_manager_save', $data);
 		
@@ -914,6 +924,8 @@ class Page_Manager extends PSAdmin_Controller {
 	
 	public function setpublishedstate($lang, $node_id, $state){
 	
+		is_logged_in();
+			
 		$content_table = "{$this->db->dbprefix}content_" . $lang;
 		
 		$sql = "UPDATE $content_table SET CO_Active = '{$state}' WHERE CO_Node = '{$node_id}'";
@@ -970,7 +982,7 @@ class Page_Manager extends PSAdmin_Controller {
 	*/
 	public function getarchivelist($node_id,$lang){
 	
-		//$archive
+		is_logged_in();
 		
 		$data['archivelist'] = $this->madmincontent->getarchivelist($node_id,$lang);
 		$data['lang'] = $lang;
@@ -988,6 +1000,8 @@ class Page_Manager extends PSAdmin_Controller {
 	*/
 	public function restore_archive($id, $lang){
 			
+		is_logged_in();
+		
 		$this->madmincontent->restore_archive($id, $lang);
 		
 	}
@@ -1015,6 +1029,8 @@ class Page_Manager extends PSAdmin_Controller {
 	*/	
 	public function reorder($parent_id){
 	
+		is_logged_in();
+			
 		$order_array = $_POST['item_'];
 		
 		if(is_array($_POST['item_'])){
@@ -1048,7 +1064,7 @@ class Page_Manager extends PSAdmin_Controller {
 	* @param string route - the current controller/method call
 	* @param mixed data - all the search criteria
  	*
-	@author peterdrinnan 
+	@author Nimmitha Vidyathilaka 
 	*/
 	public function search_module_url($route, $data){
 	

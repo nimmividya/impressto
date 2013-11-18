@@ -1,13 +1,12 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?><!DOCTYPE html>
-<html lang="en"<?php if(isset($ng_app_name)) echo " ng-app=\"{$ng_app_name}\";" ?>>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Super Admin Section | <?php echo PROJECTNAME; ?></title>
 		<!-- The base tag can cause issues with jQuery UI 1.9 Tabs. SEE http://bugs.jqueryui.com/ticket/8637 -->
 		<base href="<?php echo base_url(); ?>" />
-	
-
+    
 			
 		<?php
 	
@@ -18,24 +17,20 @@
 			
 		
 	?>
-	
+
     </head>
-    <body>
-		<div id="loading_layer" style="display:none"><img src="<?php echo ASSETURL; ?><?php echo PROJECTNAME; ?>/default/themes/liquid/img/ajax_loader.gif" alt="loader" /></div>
+    <body class="full_width">
+
 		
-		
-				
 		<div id="maincontainer" class="clearfix">
-			<!-- header -->
-            <header>
-                <div class="navbar navbar-fixed-top">
-                    <div class="navbar-inner">
-                        <div class="container-fluid">
+
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div class="navbar-inner">
+						<div class="container" style="width:100%">
 						
-						
-							<a class="brand" href="/<?php echo PROJECTNAME; ?>-admin"><i class="icon-home icon-white"></i>
-							
-							<img style="max-height:50px; margin-top:-8px;" src="<?php
+										
+							<a class="brand" href="/<?php echo PROJECTNAME; ?>-admin"><img style="max-height:50px; margin-top:-2px;" src="<?php
 										
 							$clientlogo = ASSET_ROOT . "public/" . $this->config->item('projectnum') . "/images/logo_mini.png";
 							$defaultlogo = ASSET_ROOT . PROJECTNAME . "/default/themes/liquid/img/logo_mini.png";
@@ -46,11 +41,9 @@
 							?>" alt="<?php echo ucwords(str_replace("_"," ",PROJECTNAME)); ?> by <?php echo VENDOR; ?>" />
 							
 							</a>
-																	
-											
-                            <ul class="nav user_menu pull-right">
-							
-							
+			
+							<ul class="nav navbar-nav user_menu pull-right">
+				
 								<li class="dropdown">
                                     <a href="/admin_help/" target="_blank"><i class="icon-book icon-white"></i> Help</a>
 			                     </li>
@@ -72,81 +65,130 @@
 										<li><a href="/logout/">Log Out</a></li>
                                     </ul>
                                 </li>
-                            </ul>
-							<a data-target=".nav-collapse" data-toggle="collapse" class="btn_menu">
-								<span class="icon-align-justify icon-white"></span>
-							</a>
-							
-							
-							
-							
-							<nav>
-							
-							<?php
-							
-							$user_session_data = $this->session->all_userdata();	
-							$user_role = $user_session_data['role']; 
-							
-					
-		
-							if($user_role == 1){ // this is for the administrator to toggle the WYSIWYG editor on the fly ?>
-							
-							<div style="margin-top:5px;">
-							<span style="color:#FFFFFF; float:left; margin-top:5px; font-size:10px; font-weight:bold">WYSIWYG</span>
-							<div id="wysiwyg_block_toggle" class='toggle yellow_toggle' data-enabled="ON" data-disabled="OFF" data-toggle="toggle">
-								<input type="checkbox" value="1" name="myCheckbox" class="checkbox" <?php
-								
-									$block_wysiwyg_editing = $this->input->cookie('block_wysiwyg_editing', FALSE);
-									
-									if(!$block_wysiwyg_editing ||  $block_wysiwyg_editing == "false" || $block_wysiwyg_editing == "" ) echo " checked=\"checked\"";
-																		
-									 
-								?> />
-								<label class="check" for="myCheckbox"></label>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				
+				<div class="modal fade" id="myMail">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h3 class="modal-title">New Messages</h3>
 							</div>
+							<div class="modal-body">
+								<div class="alert alert-info">In this table jquery plugin turns a table row into a clickable link.</div>
+								<table class="table table-condensed table-striped" data-provides="rowlink">
+									<thead>
+										<tr>
+											<th>Sender</th>
+											<th>Subject</th>
+											<th>Date</th>
+											<th>Size</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Declan Pamphlett</td>
+											<td><a href="javascript:void(0)">Lorem ipsum dolor sit amet</a></td>
+											<td>23/05/2012</td>
+											<td>25KB</td>
+										</tr>
+										<tr>
+											<td>Erin Church</td>
+											<td><a href="javascript:void(0)">Lorem ipsum dolor sit amet</a></td>
+											<td>24/05/2012</td>
+											<td>15KB</td>
+										</tr>
+										<tr>
+											<td>Koby Auld</td>
+											<td><a href="javascript:void(0)">Lorem ipsum dolor sit amet</a></td>
+											<td>25/05/2012</td>
+											<td>28KB</td>
+										</tr>
+										<tr>
+											<td>Anthony Pound</td>
+											<td><a href="javascript:void(0)">Lorem ipsum dolor sit amet</a></td>
+											<td>25/05/2012</td>
+											<td>33KB</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-							
-							<script>
-							 // Don't use .toggle, it will be global.
-							 $('#wysiwyg_block_toggle').toggle({
-								onClick: function (event, status) {
-								
-									$.cookie("block_wysiwyg_editing", status, {path : '/'} );
-																	
-								}, // Do something on status change if you want
-								text: {
-									enabled: false, // Change the enabled disabled text on the fly ie: 'ENABLED'
-									disabled: false // and for 'DISABLED'
-								},
-								style: {
-									enabled: 'btn-warning', // default button styles like btn-primary, btn-info, btn-warning just remove the btn- part.
-									disabled: false // same goes for this, primary, info, warning, danger, success. 
-								}
-							});
-							</script>
-							
-							<?php } ?>
-							</nav>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default">Go to mailbox</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				
-    
-                        </div>
-                    </div>
-                </div>
+				<div class="modal fade" id="myTasks">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h3 class="modal-title">New Tasks</h3>
+							</div>
+							<div class="modal-body">
+								<div class="alert alert-info">In this table jquery plugin turns a table row into a clickable link.</div>
+								<table class="table table-condensed table-striped" data-provides="rowlink">
+									<thead>
+										<tr>
+											<th>id</th>
+											<th>Summary</th>
+											<th>Updated</th>
+											<th>Priority</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>P-23</td>
+											<td><a href="javascript:void(0)">Admin should not break if URL…</a></td>
+											<td>23/05/2012</td>
+											<td><span class="label label-danger">High</span></td>
+											<td>Open</td>
+										</tr>
+										<tr>
+											<td>P-18</td>
+											<td><a href="javascript:void(0)">Displaying submenus in custom…</a></td>
+											<td>22/05/2012</td>
+											<td><span class="label label-warning">Medium</span></td>
+											<td>Reopen</td>
+										</tr>
+										<tr>
+											<td>P-25</td>
+											<td><a href="javascript:void(0)">Featured image on post types…</a></td>
+											<td>22/05/2012</td>
+											<td><span class="label label-success">Low</span></td>
+											<td>Updated</td>
+										</tr>
+										<tr>
+											<td>P-10</td>
+											<td><a href="javascript:void(0)">Multiple feed fixes and…</a></td>
+											<td>17/05/2012</td>
+											<td><span class="label label-warning">Medium</span></td>
+											<td>Open</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default">Go to task manager</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				
-				
-				
-				
-				
-		
-	
-				
-				
-				
-            </header>
-            
-            <!-- main content -->
+			</header>
+			
+			
+
             <div id="contentwrapper">
-                <div class="main_content">
+   
+   
+                   <div class="main_content">
 				
 				
                     
@@ -178,81 +220,90 @@ if(isset($parsedcontent)){
                         
                 </div>
 				
-	
+   
+   
             </div>
-            
-			<!-- sidebar -->
             <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
-            <div class="sidebar">
+<div class="sidebar">
+	
+	<div class="sidebar_inner_scroll">
+		<div class="sidebar_inner">
+		
+				<?php
 				
-				<div class="antiScroll">
-					<div class="antiscroll-inner">
-						<div class="antiscroll-content">
-					
-							<div class="sidebar_inner">
-							
-								<?php
-								
-								$clientlogo = ASSET_ROOT . "public/" . $this->config->item('projectnum') . "/images/logo.png";
-								if(file_exists($clientlogo)){ ?>
-								
-								<a href="/" target="_blank"><img border="0" src="<?php
-								echo ASSETURL . "public/" . $this->config->item('projectnum') . "/images/logo.png";
-								?>" alt="<?php echo ucwords(str_replace("_"," ",PROJECTNAME)); ?> by <?php echo VENDOR; ?>" /></a>
-
-								<?php }
-								
-								$cache_id = 'adminleftnav_' . $this->session->userdata('role') . '_' . $this->config->item('current_menu_section') . '_'. $this->router->class;
-								
-															
-								if( ! $leftnav = $this->cache->get($cache_id)){
-									$leftnav = $this->load->view("themes/" . $this->config->item('admin_theme') . '/admin/includes/leftnav', $data, TRUE); 
-									$this->cache->write($leftnav,$cache_id);
-								}
-								
-								
-								echo "<div id=\"leftnav\">";
-										
-													
-								echo $leftnav; 
-								
-								echo "</div>";
-									
-								
-								?>
-										
-								
-								<div class="push"></div>
-								
-								<div style="font-size:10px; background: none repeat scroll 0 0; bottom: 0; position: absolute; left:0px; width: 100%;">
-									<div style="padding:2px; background:#CCCCCC">
-									<?php echo ucwords(str_replace("_"," ",PROJECTNAME)); ?>
-									<br />&copy;<?php echo date("Y")?>, <a href="http://<?php echo VENDORURL; ?>" target="_blank"><?php echo VENDOR; ?></a>.
-									<br />Generated in <?php $this->benchmark->mark('code_end'); echo $this->benchmark->elapsed_time('code_start', 'code_end'); ?> seconds
-									</div>
-								<div>
-
-							</div>
-							   
-
-						
-						</div>
-					</div>
-				</div>
+				$clientlogo = ASSET_ROOT . "public/" . $this->config->item('projectnum') . "/images/logo.png";
+				if(file_exists($clientlogo)){ ?>
 				
+				<a href="/" target="_blank"><img border="0" src="<?php
+				echo ASSETURL . "public/" . $this->config->item('projectnum') . "/images/logo.png";
+				?>" alt="<?php echo ucwords(str_replace("_"," ",PROJECTNAME)); ?> by <?php echo VENDOR; ?>" /></a>
 
+				<?php }
+				
+				$cache_id = 'adminleftnav_' . $this->session->userdata('role') . '_' . $this->config->item('current_menu_section') . '_'. $this->router->class;
+				
+											
+				//if( ! $leftnav = $this->cache->get($cache_id)){
+					$leftnav = $this->load->view("themes/" . $this->config->item('admin_theme') . '/admin/includes/leftnav', $data, TRUE); 
+					//$this->cache->write($leftnav,$cache_id);
+				//}
+				
+				
+				?>
+
+			<div id="side_accordion" class="panel-group">
 			
+			
+				<?=$leftnav?>
+			
+			
+			
+
+
+
+				
+				
+				
+				
+
+	
 			</div>
 			
-			
+			<div class="push"></div>
+		</div>
+					   
+		<div class="sidebar_info">
+		
+			<div style="padding:2px;">
+						<?php echo ucwords(str_replace("_"," ",PROJECTNAME)); ?>
+						<br />&copy;<?php echo date("Y")?>, <a href="http://<?php echo VENDORURL; ?>" target="_blank"><?php echo VENDOR; ?></a>.
+						<br />Generated in <?php $this->benchmark->mark('code_end'); echo $this->benchmark->elapsed_time('code_start', 'code_end'); ?> seconds
+			</div>
+									
+			<ul class="list-unstyled">
+				<li>
+					<span class="act act-warning">65</span>
+					<strong>New comments</strong>
+				</li>
+				<li>
+					<span class="act act-success">10</span>
+					<strong>New articles</strong>
+				</li>
+				<li>
+					<span class="act act-danger">85</span>
+					<strong>New registrations</strong>
+				</li>
+			</ul>
+		</div> 
+	</div>
+	
+</div>
 
-	</div>
 	
-		
-	</div>
-	
-	</div>		
-		
+
+	  
+</div>
+
 
 		
 <div id="ajaxLoadAni">
@@ -260,5 +311,15 @@ if(isset($parsedcontent)){
 	<span>Processing...</span>
 </div><!-- [END] #ajaxLoadAni -->
 
-	</body>
-</html>
+
+
+<?php
+	
+	
+	echo $this->load->view("themes/" . $this->config->item('admin_theme') . '/admin/includes/footer_includes', $data, TRUE); 
+		
+?>
+
+
+					</body>
+				</html>

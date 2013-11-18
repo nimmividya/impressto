@@ -15,7 +15,7 @@
 
 /**
 * load the role list
-* @author: peter drinnan
+* @author: Nimmitha Vidyathilaka
 * @return array
 */
 function load_defined_roles(){
@@ -46,7 +46,7 @@ function load_defined_roles(){
 
 /**
 * load the role based permissions for the specified module
-* @author: peter drinnan
+* @author: Nimmitha Vidyathilaka
 */
 function load_module_permissions($module_id){
 

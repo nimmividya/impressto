@@ -34,7 +34,7 @@ class tags extends PSBase_Controller {
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/tags/js/tags_manager.js");
 		
 		
-		$this->asset_loader->add_header_js("/default/third_party/jquery/jquery.validate.min.js");
+		$this->asset_loader->add_header_js("/default/vendor/jquery/plugins/validate/jquery.validate.min.js");
 		$this->asset_loader->add_header_css("/default/core/css/jquery/validate/style.css");		
 		
 

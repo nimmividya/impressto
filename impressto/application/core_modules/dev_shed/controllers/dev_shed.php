@@ -28,8 +28,8 @@ class dev_shed extends PSAdmin_Controller {
 		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/dev_shed/js/dev_shed.js");
 		
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/third_party/bootstrap/js/bootstrap-lightbox.js");
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/default/third_party/bootstrap/css/bootstrap-lightbox.css");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/default/vendor/bootstrap/js/bootstrap-lightbox.js");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME . "/default/vendor/bootstrap/css/bootstrap-lightbox.css");
 								
 		$data['parsedcontent'] = $this->load->view('dev_shed', $data, TRUE); 
 		

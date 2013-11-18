@@ -59,16 +59,25 @@ class site_search extends Widget
 		
 		
 		$moduleoptions = ps_getmoduleoptions('site_search');
+
+		$lang_avail = $this->config->item('lang_avail');
+					
+		foreach($lang_avail AS $langcode=>$language){
+			$data['search_page_' . $langcode] = $moduleoptions['search_page_' . $langcode];
+		}	
+
+		$data['search_page'] = $data['search_page_' . $this->language];
 		
 		if($this->input->get_post('listings_per_page') != "") $moduleoptions['listings_per_page'] = $this->input->get_post('listings_per_page');
-		
-		
-		
-		
+	
 		$data['listings_per_page'] = $moduleoptions['listings_per_page'];
 		
 		$data['template'] = $moduleoptions['search_template'];
-		$data['search_page'] = $moduleoptions['search_page'];
+		
+
+				
+		//$data['search_page'] = $moduleoptions['search_page'];
+				
 		$data['sortmethod'] = $moduleoptions['sortmethod'];
 		
 		if(isset($moduleoptions['content_filters']) && $moduleoptions['content_filters'] != ""){
@@ -212,15 +221,12 @@ class site_search extends Widget
 			
 			$rowindex = 1;
 			
+			
 			foreach ($srecords['records'] as $rowdata){
 
 				$rowdata['rowindex'] = $rowindex;
-				
-				//print_r($rowdata);
-				
-				$rowdata['search_page'] = $data['search_page'];
-				
-				
+		
+				$rowdata['search_page'] = $data['search_page_' . $this->language];
 				
 				$data['resultrows'] .= $this->impressto->showpartial($template_file,'SEARCHRESULTITEM',$rowdata);
 				

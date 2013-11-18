@@ -691,7 +691,7 @@ class Index extends PSFront_Controller {
 		
 	
 		$master_template = "index.tpl.php";
-		// peterdrinnan - this seems WRONG. Should come from a config value ...
+		// Nimmitha Vidyathilaka - this seems WRONG. Should come from a config value ...
 		//$master_template = "master.tpl.php";
 		
 		$data['template'] = $master_template;

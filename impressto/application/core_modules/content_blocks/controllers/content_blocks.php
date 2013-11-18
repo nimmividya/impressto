@@ -45,9 +45,9 @@ class content_blocks extends PSAdmin_Controller {
 						
 		$data['blocklist'] = $this->load->view('blocklist', $data, true);	
 				
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/jquery.markitup.js");		
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/jquery.markitup.js");		
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/page_manager/js/markitup_set.js");		
-		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/third_party/markitup/skins/markitup/style.css");
+		$this->asset_loader->add_header_css(ASSETURL . PROJECTNAME  . "/default/vendor/jquery/plugins/markitup/skins/markitup/style.css");
 		$this->asset_loader->add_header_css(ASSETURL .PROJECTNAME."/core_modules/page_manager/css/markitup_style.css");	
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/content_blocks/js/content_blocks_manager.js");
 	

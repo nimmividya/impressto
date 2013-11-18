@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: tag cloud
 @Projectnum: 4660
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Status: complete
 @Date: 2012-02
 */

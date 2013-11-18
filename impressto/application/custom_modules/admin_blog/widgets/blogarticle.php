@@ -40,7 +40,7 @@ class blogarticle extends Widget
 
 	
 		////////////////////////////////
-		// peterdrinnan - May 21, 2012
+		// Nimmitha Vidyathilaka - May 21, 2012
 		//add the path for the widgets module so we can locate the models	
 		//$this->load->_add_module_paths('admin_blog');
 		
@@ -58,11 +58,13 @@ class blogarticle extends Widget
 		if(!isset($widget_args['widget_id']) && isset($data['name'])) 
 			$widget_args['widget_id'] = $this->widget_utils->getwidgetid('blogarticle', 'admin_blog', $data['name']);
 		
-					
+		
 				
 		$widget_options = $this->widget_utils->get_widget_options($widget_args['widget_id']);
 		
 		
+		$page_data = $this->config->item('page_data');
+
 		
 		
 		$moduleoptions = ps_getmoduleoptions('admin_blog');
@@ -95,8 +97,14 @@ class blogarticle extends Widget
 			$data['blogpagetitle'] = ""; 
 			
 		}else{
+			
 			$data['blogpagetitle'] = $moduleoptions['blog_title_' . $lang_selected];
+	
+			$page_data['CO_seoTitle'] = $data['blogpagetitle'];
+		
 		}
+
+	
 		
 		
 		$data['blog_pager'] = 1;
@@ -113,6 +121,9 @@ class blogarticle extends Widget
 		
 			// simply load the specificed article into the view and don't bother with listing anything else
 			$data['blogitem'] = $this->blog_model->get_blog_item($data['blog_id']);
+			
+			$page_data['page_title'] = $data['blogitem']['blogtitle'];
+					
 					
 		}else if ($this->input->get_post('blog_tag') != ""){
 		
@@ -123,7 +134,6 @@ class blogarticle extends Widget
 			$data['blogitems'] = $newsrecords['limitedrecords'];
 			$data['totalblogcount'] = $newsrecords['totalrowcount'];
 
-			
 			
 		}else if ($this->input->get_post('blog_search_keywords') != ""){
 		
@@ -158,9 +168,15 @@ class blogarticle extends Widget
 		$data['content_type'] = "blog";
 		if( isset($data['blog_id']) ) $data['content_id'] = $data['blog_id'];
 		
+		// events are a broadcast method
 		$triggerdata = Events::trigger('show_content', $data, 'array');
 		if($triggerdata) $data = $triggerdata[0];
 		
+
+
+		// set page data overrides here
+		$this->config->set_item('page_data', $page_data);
+	
 	
 		// DO NOT USE $this->render unless you want to simply show PHP files
 		//$this->render("blogticker/" . $widget_options['template'],$data);

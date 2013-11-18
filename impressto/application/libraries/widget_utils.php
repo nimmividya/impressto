@@ -509,9 +509,7 @@ class widget_utils{
 	
 		$CI = & get_instance();
 			
-		
-		//return $string;
-		
+	
 		if($string == "") return "";
 		
 		// replace BBCode style widget call for actual widget plugin call

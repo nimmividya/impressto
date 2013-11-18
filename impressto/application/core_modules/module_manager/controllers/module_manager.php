@@ -33,10 +33,10 @@ class module_manager extends PSAdmin_Controller {
 
 		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME . "/core_modules/module_manager/css/module_manager.css");
 		
-		$this->asset_loader->add_header_js("/third_party/bootstrap/js/bootstrap-tooltip.js");
+		$this->asset_loader->add_header_js("/vendor/bootstrap/js/bootstrap-tooltip.js");
 		
-		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/third_party/ajaxfileuploader/ajaxfileupload.js");
-		$this->asset_loader->add_header_js("third_party/bootstrap/js/bootstrap-fileupload.js");
+		$this->asset_loader->add_header_js(ASSETURL . PROJECTNAME  . "/default/vendor/xtras/ajaxfileuploader/ajaxfileupload.js");
+		$this->asset_loader->add_header_js("vendor/bootstrap/js/bootstrap-fileupload.js");
 		
 				
 			

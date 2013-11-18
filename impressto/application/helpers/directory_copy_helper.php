@@ -45,7 +45,7 @@ if(!function_exists('directory_copy'))
 	*
 	* NOTE: warning turned off in the file function calls because basedir restriction
 	* is in effect on some  servers (Media Temple)
-	* @author peterdrinnan
+	* @author Nimmitha Vidyathilaka
 	* @param dir string - full directory path to create
 	* @secure bool - if TRUE adds a .htaccess file to each folder
 	*

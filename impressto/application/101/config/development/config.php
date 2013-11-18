@@ -25,14 +25,11 @@
 /* NOTE: whenever you change projectnum, plugins or template paths, clear the smart cache */
 
 
-$config['projectnum'] = 101;
+$config['projectnum'] = 102;
 $config['mobilized'] = FALSE;
 $config['onlymobile'] = FALSE;
 
 $config['debug'] = FALSE;
-
-
-$config['authprovider'] = "im_authlib";
 
 		
 
@@ -145,7 +142,7 @@ $config['url_suffix'] = '';
 |
 */
 $config['language']	= 'english';
-// peterdrinnan - we have to override this based on the users perference
+// Nimmitha Vidyathilaka - we have to override this based on the users perference
 //$config['language']	= 'french';
 
 /*
@@ -303,7 +300,7 @@ $config['cache_path'] = '';
 | This will be auto generated in setup
 |
 */
-$config['encryption_key'] = "23a5db5b4d3a93ec0de8339bd31789ef";
+$config['encryption_key'] = "71dcafd10d451d70d04bb895d2030e03";
 
 /*
 |--------------------------------------------------------------------------

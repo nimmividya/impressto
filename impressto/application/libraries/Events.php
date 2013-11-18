@@ -47,10 +47,10 @@ class Events
 
 		$is_core = TRUE;
 
-		$_ci->load->model('ps_modules');
+		$_ci->load->library('module_utils');
 		
 	
-		if (!$results = $_ci->ps_modules->get_all())
+		if (!$results = $_ci->module_utils->get_all())
 		{
 			return FALSE;
 		}

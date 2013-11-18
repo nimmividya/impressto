@@ -3,7 +3,7 @@
 @Type: PHP
 @Filename: mega_cloud.php
 @Projectnum: 1001
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Status: complete
 @Date: 2012-02
 -->

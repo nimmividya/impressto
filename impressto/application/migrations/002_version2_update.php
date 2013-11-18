@@ -7,18 +7,22 @@ class Migration_Version2_update extends CI_Migration
 	
 
 
-		if ( ! $this->db->table_exists($this->db->dbprefix . "user_data" ) ){
+		if ( ! $this->db->table_exists($this->db->dbprefix . "user_profile" ) ){
 		
 				
 			$this->db->query("
-				CREATE TABLE `".$this->db->dbprefix . "user_data` (
-				`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-				`user_id` INT(11) NOT NULL,
-				PRIMARY KEY (`id`)
+				CREATE TABLE `".$this->db->dbprefix . "user_profile` (
+				`user_id` int(11),
+				`first_name` VARCHAR(255) NOT NULL,
+				`last_name` VARCHAR(255) NOT NULL,
+				`oauth_provider` VARCHAR(50) NOT NULL,
+				`oauth_provider_name` VARCHAR(75) NOT NULL, 
+				`oauth_uid` VARCHAR(75) NOT NULL
 				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 			");
 		
 		}
+		
 		
 		/* this simply keeps track of fields in the table above so they can be assigned to roles
 		 and used as different types of data
@@ -29,23 +33,43 @@ class Migration_Version2_update extends CI_Migration
 				
 			$this->db->query("
 				CREATE TABLE `".$this->db->dbprefix . "user_fields` (
-				`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-				`name` varchar(50) NOT NULL,
-				`friendly_name` VARCHAR(255) NOT NULL,
-				`order` INT(11) NOT NULL,	
-				`type` VARCHAR(50) NOT NULL,
-				`options` TEXT NULL,
-				`width` VARCHAR(25) NULL DEFAULT NULL,
-				`default` VARCHAR(200) NULL DEFAULT NULL,
-				`required` TINYINT(1) NOT NULL,
-				`private` TINYINT(1) NOT NULL,
-				`help_text` TEXT NULL,
+				`id` INT(11) NOT NULL AUTO_INCREMENT,
+				`field_name` VARCHAR(100) NOT NULL, 
+				`input_type` VARCHAR(25) NOT NULL, 
+				`field_value` TEXT NOT NULL,
+				`default_value` TEXT NULL,
+				`paragraph` TEXT,
+				`visible` INT( 1 ) NOT NULL DEFAULT '1', 
+				`active` INT( 1 ) NOT NULL DEFAULT '1',
+				`width` VARCHAR( 6 ) NOT NULL DEFAULT '',
+				`height` VARCHAR( 6 ) NOT NULL DEFAULT '',
+				`required` INT(1) NOT NULL DEFAULT '0',
+				`orientation` ENUM('horizontal','vertical') NOT NULL DEFAULT 'horizontal',
+				`onchange` TEXT,
+				`position` INT(4) NOT NULL DEFAULT '0',
+				`updated` DATETIME NULL DEFAULT NULL,
 				PRIMARY KEY (`id`)
 				) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 			");
 		
 		}
 		
+		if ( ! $this->db->table_exists($this->db->dbprefix . "user_field_options" ) ){
+		
+				
+			$this->db->query("
+				CREATE TABLE `".$this->db->dbprefix . "user_field_options` (
+				`option_id` int(11) NOT NULL auto_increment,
+				`field_id` int(11) NOT NULL default '0',
+				`option_value` varchar(255) default NULL,
+				`option_label` varchar(255) default NULL,
+				`position` int(11) NOT NULL default '0',
+				PRIMARY KEY  (`option_id`)
+				) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+			");
+		
+		}
+
 		
 		if ( ! $this->db->table_exists($this->db->dbprefix . "user_role_fields" ) ){
 		

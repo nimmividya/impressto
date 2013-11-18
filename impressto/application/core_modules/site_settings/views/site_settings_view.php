@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: site_settings_view.php
 @Description: general settings page for the site
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete
@@ -347,7 +347,7 @@ $request_uri = getenv("REQUEST_URI");
 				
 					$options = array();
 				
-					if(file_exists(INSTALL_ROOT . "default/third_party/ckeditor/ckeditor.php")){
+					if(file_exists(INSTALL_ROOT . "default/vendor/ckeditor/ckeditor.php")){
 					
 						$options["CK Editor"] = "ckeditor";
 											

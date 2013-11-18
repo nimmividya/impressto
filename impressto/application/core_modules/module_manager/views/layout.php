@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: layout.php
 @Description: manage modules and create new ones
-@Author: peterdrinnan
+@Author: Nimmitha Vidyathilaka
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

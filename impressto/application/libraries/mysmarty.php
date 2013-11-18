@@ -53,10 +53,10 @@
 			
 			$updatedtemplate_dirs = $updatedplugin_dirs = array();
 			
-			// peterdrinnan - need to add the language var here.
+			// Nimmitha Vidyathilaka - need to add the language var here.
 			$lang = $CI->config->item('lang_selected');
 						
-			// peterdrinnan - the default  language comes from the lang_detect config file			
+			// Nimmitha Vidyathilaka - the default  language comes from the lang_detect config file			
 			$default_lang = $CI->config->item('lang_default');
 			
 										

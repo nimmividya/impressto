@@ -3,6 +3,7 @@
 /**
  * Impresto template engine
  *
+ * NOTE: IF templates are read with the top section missing, try to encode with utf8 and also add/remove some lines. it is wierd but is works. 
  * Example usage: 
  * $this->impressto->setDir('/var/www/mysite/mytemplates/');
  * $data = array("pagetitle"=>"Hello World");
@@ -644,6 +645,8 @@ class impressto{
 		$sContent = fread( $rFile, $iSize );
 		else
 		$sContent = null;
+		
+		//echo " ============= " . $sContent . " +++++++++++++++++++";
 
 		fclose( $rFile );
 		return ' '.$sContent;
