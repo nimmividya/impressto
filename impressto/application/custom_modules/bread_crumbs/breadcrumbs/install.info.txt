@@ -1,6 +1,0 @@
-@Name: Bread Crumbs
-@Type: custom
-@Description: simple breadcrumbs micro widget
-@Author: Acart Communications
-@Version: 1.1
-@Date: 2012-08-15
