@@ -102,7 +102,7 @@ class updater extends Widget
 		// to see if this site is eligable for automatic updates.
 				
 		
-		$updateurl = "http://central.bitheads.ca/assets/upload/ps_updates/core_update_" . APPSERIES . "." . ($data['new_migration_version'] + 1) . ".markdown";
+		$updateurl = "http://impressto.com/assets/upload/ps_updates/core_update_" . APPSERIES . "." . ($data['new_migration_version'] + 1) . ".markdown";
 
 		
 		$handle = @fopen($updateurl,"r");

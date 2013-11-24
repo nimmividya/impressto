@@ -35,7 +35,7 @@ if(!$curl_enabled){ ?>
 
 	<h3 class="alert-heading"><?php echo PROJECTNAME; ?> has been updated</h3>
 	<p>Your version of <?php echo PROJECTNAME; ?> has been updated from <?=$appseries?>.<?=$current_migration_version?> to <?=$appseries?>.<?=$new_migration_version?>. 
-	<a href="http://www.central.bitheads.ca/en/<?=$appseries?>.<?=$new_migration_version?>_updates">See the full change log</a>.</p>
+	<a href="http://www.impressto.com/en/<?=$appseries?>.<?=$new_migration_version?>_updates">See the full change log</a>.</p>
 	
 </div>
 

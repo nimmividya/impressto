@@ -43,7 +43,7 @@ $active_record = TRUE;
  
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'carmsdbadmin';
-$db['default']['password'] = 'acartalban1a';
+$db['default']['password'] = 'impresstoalban1a';
 $db['default']['database'] = 'staging_carms';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'ps_';

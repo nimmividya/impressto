@@ -3,7 +3,7 @@
 $config['widget_config'] = array(
 	'name'	=> 'Nav Bar Menu',
 	'description'	=> 'horizontal navigation menu bar',
-	'author'		=> 'Acart Communications',
+	'author'		=> 'Nimmitha Vidyathilaka',
 	'admin_menu_section'		=> 'widget',
 	'module_type'		=> 'widget'
 );

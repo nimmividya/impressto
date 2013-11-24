@@ -165,7 +165,7 @@ class remote extends PSBase_Controller {
 
 
 	/**
-	* Ajax responder that checks the central.bitheads.ca server to determine if any updates are available for 
+	* Ajax responder that checks the impressto.com server to determine if any updates are available for 
 	* a specific module
 	* @param string  module_dirname
 	* @param int module current version
@@ -183,7 +183,7 @@ class remote extends PSBase_Controller {
 		// and compare it to the API key for the user by checking the purchased packages in the 
 		// data table package_licences.
 
-		// this will all be in a new module called "package_manager" which is propritary to Acart.
+		// this will all be in a new module called "package_manager" which is propritary to Impressto.
 		
 		
 		$return_array = array("error"=>"", "version"=>2.3, "module_type" => $module_type, "last_updated"=>"October 20, 2012", "status"=>"beta");
@@ -219,7 +219,7 @@ class remote extends PSBase_Controller {
 		$target_dir = APPPATH . $module_type . "_modules" . DS . $module_dirname;
 		
 
-		$sourceurl = "http://central.bitheads.ca/assets/upload/ps_updates/modules/" . $module_dirname . "/" . $module_dirname . "_" . $version . ".zip";
+		$sourceurl = "http://impressto.com/assets/upload/ps_updates/modules/" . $module_dirname . "/" . $module_dirname . "_" . $version . ".zip";
 		
 	
 		if($this->copyRemoteFile($sourceurl,$zip_package)){

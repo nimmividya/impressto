@@ -11,7 +11,7 @@
 * 
 * Type:     function<br>
 * Name:     myApp WidgetZone plugin<br>
-* Author:   Galbraith Desmond (Acart)<br>
+* Author:   Galbraith Desmond (Impressto)<br>
 * Date:     Jan 08, 2012<br>
 * Purpose:  get widgets and render them in order<br>
 * Examples: {widgetzone name='top'}

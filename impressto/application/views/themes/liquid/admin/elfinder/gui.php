@@ -163,7 +163,7 @@
 							
 							
 								<li class="dropdown">
-                                    <a href="http://kb.central.bitheads.ca/" target="_blank"><i class="icon-book icon-white"></i> Help</a>
+                                    <a href="http://kb.impressto.com/" target="_blank"><i class="icon-book icon-white"></i> Help</a>
 			                     </li>
 										
 									

@@ -59,7 +59,7 @@ if(!$curl_enabled){ ?>
 
 <br />
 
-<div class="alert alert-info">Upload and install a module using a <a href="http://central.bitheads.ca/en/modules/">BitHeads Central Installer Package</a>.</div>
+<div class="alert alert-info">Upload and install a module using a <a href="http://impressto.com/en/modules/">BitHeads Central Installer Package</a>.</div>
 
 <div class="alert alert-error" id="install_module_dialog_message" style="display:none"></div>
 	

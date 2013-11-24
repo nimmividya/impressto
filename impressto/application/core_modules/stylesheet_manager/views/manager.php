@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: manager.php
 @Description: manage style sheets without having to go to your freaking hard drive eh! 
-@Author: Some Acart Dude (who takes no blame here)
+@Author: Some Impressto Dude (who takes no blame here)
 @Projectnum: 1001
 @Version: 1.2
 @Status: complete

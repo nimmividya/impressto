@@ -1,7 +1,7 @@
 <?php (defined('BASEPATH')) OR exit('No direct script access allowed');
 
 /**
-* Added by Acart to add hooks to modules
+* Added by Impressto to add hooks to modules
 *
 *
 */

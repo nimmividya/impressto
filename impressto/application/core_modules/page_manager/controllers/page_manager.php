@@ -879,7 +879,7 @@ class Page_Manager extends PSAdmin_Controller {
 		$this->madmincontent->setwidgetcollection($returnarray['node_id'], $widget_collection);
 		
 		// this launches event triggers. 
-		// See: http://kb.central.bitheads.ca/index.php?action=artikel&cat=20&id=4
+		// See: http://kb.impressto.com/index.php?action=artikel&cat=20&id=4
 		// Example file in /appname/application/custom_modules/top_banners/events.php
 		// NOTE: June 16, 2012 - Nimmitha Vidyathilaka - This may be soon replaced with a generic trigger call
 		// once the trigger manager is setup

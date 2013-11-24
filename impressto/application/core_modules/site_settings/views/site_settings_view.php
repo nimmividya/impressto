@@ -449,7 +449,7 @@ $request_uri = getenv("REQUEST_URI");
 		<div class="cfg">
 		   <div class="cgfparams"> 
 			  <ul>
-				<li><label>HybridAuth Endpoint URL</label><input type="text" style="min-width:380px;" name="GLOBAL_HYBRID_AUTH_URL_BASE" value="http://bitheadscentral.local/hybridauth/" class="inputgnrc"></li>
+				<li><label>HybridAuth Endpoint URL</label><input type="text" style="min-width:380px;" name="GLOBAL_HYBRID_AUTH_URL_BASE" value="http://impressto.com/hybridauth/" class="inputgnrc"></li>
 			  </ul>
 		   </div> 
 		   <div style="margin-left: 430px;padding: 20px;min-height: 60px;width: 190px;" class="cgftip">
@@ -498,7 +498,7 @@ $request_uri = getenv("REQUEST_URI");
 
 					 
 
-											<p><b>3</b>. Put your website domain in the <b>Site Url</b> field. It should match with the current hostname <em style="color:#CB4B16;">bitheadscentral.local</em>.</p> 
+											<p><b>3</b>. Put your website domain in the <b>Site Url</b> field. It should match with the current hostname <em style="color:#CB4B16;">impressto.com</em>.</p> 
 						
 
 						
@@ -542,7 +542,7 @@ $request_uri = getenv("REQUEST_URI");
 											<p>
 							<b>4</b>. Provide this URL as the Callback URL for your application:
 							<br>
-							<span style="color:green">http://bitheadscentral.local/hybridauth/?hauth.done=Google</span>						</p>
+							<span style="color:green">http://impressto.com/hybridauth/?hauth.done=Google</span>						</p>
 					 
 
 					 
@@ -601,7 +601,7 @@ $request_uri = getenv("REQUEST_URI");
 
 						
 
-											<p><b>3</b>. Put your website domain in the <b>Application Website</b> and <b>Application Callback URL</b> fields. It should match with the current hostname <em style="color:#CB4B16;">bitheadscentral.local</em>.</p> 
+											<p><b>3</b>. Put your website domain in the <b>Application Website</b> and <b>Application Callback URL</b> fields. It should match with the current hostname <em style="color:#CB4B16;">impressto.com</em>.</p> 
 						<p><b>4</b>. Set the <b>Default Access Type</b> to <em style="color:#CB4B16;">Read, Write, &amp; Direct Messages</em>.</p> 
 						
 					
@@ -646,7 +646,7 @@ $request_uri = getenv("REQUEST_URI");
 
 						
 
-											<p><b>3</b>. Put your website domain in the <b>Application URL</b> and <b>Application Domain</b> fields. It should match with the current hostname <em style="color:#CB4B16;">bitheadscentral.local</em>.</p> 
+											<p><b>3</b>. Put your website domain in the <b>Application URL</b> and <b>Application Domain</b> fields. It should match with the current hostname <em style="color:#CB4B16;">impressto.com</em>.</p> 
 						<p><b>4</b>. Set the <b>Kind of Application</b> to <em style="color:#CB4B16;">Web-based</em>.</p> 
 						
 
@@ -687,7 +687,7 @@ $request_uri = getenv("REQUEST_URI");
 
 					 
 
-											<p><b>3</b>. Put your website domain in the <b>Redirect Domain</b> field. It should match with the current hostname <em style="color:#CB4B16;">bitheadscentral.local</em>.</p>
+											<p><b>3</b>. Put your website domain in the <b>Redirect Domain</b> field. It should match with the current hostname <em style="color:#CB4B16;">impressto.com</em>.</p>
 					 
 
 						
@@ -740,7 +740,7 @@ $request_uri = getenv("REQUEST_URI");
 
 						
 
-											<p><b>3</b>. Put your website domain in the <b>Integration URL</b> field. It should match with the current hostname <em style="color:#CB4B16;">bitheadscentral.local</em>.</p> 
+											<p><b>3</b>. Put your website domain in the <b>Integration URL</b> field. It should match with the current hostname <em style="color:#CB4B16;">impressto.com</em>.</p> 
 						<p><b>4</b>. Set the <b>Application Type</b> to <em style="color:#CB4B16;">Web Application</em>.</p> 
 						
 

@@ -282,7 +282,7 @@ class Dashboard extends PSAdmin_Controller {
 			else $this->file_tools->create_dirpath($unpackfolder);
 		
 			$ch = curl_init();
-			$source = "http://central.bitheads.ca/assets/upload/ps_updates/core_updates_{$version}.zip";
+			$source = "http://impressto.com/assets/upload/ps_updates/core_updates_{$version}.zip";
 
 			curl_setopt($ch, CURLOPT_URL, $source);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

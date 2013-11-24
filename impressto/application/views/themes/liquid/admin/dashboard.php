@@ -20,8 +20,8 @@ if($dashboard_content != ""){
 
 
 	<ul class="list_b">
-	<li><a style="color:#000000" href="http://kb.central.bitheads.ca" target="_blank">BitHeads Central</a></li>
-	<li><a href="http://www.central.bitheads.ca/changelog_<?=$appseries?>.<?=$new_migration_version?>">BitHeads Central <?=$appseries?>.<?=$new_migration_version?> Change Log</a></li>
+	<li><a style="color:#000000" href="http://kb.impressto.com" target="_blank">BitHeads Central</a></li>
+	<li><a href="http://www.impressto.com/changelog_<?=$appseries?>.<?=$new_migration_version?>">BitHeads Central <?=$appseries?>.<?=$new_migration_version?> Change Log</a></li>
 	</ul>
 	</div>
 

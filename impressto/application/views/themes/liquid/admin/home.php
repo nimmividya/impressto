@@ -25,7 +25,7 @@
 		</ul>
 		<?php } ?>
 	</p>
-		<a href="http://www.central.bitheads.ca/changelogs/<?=$current_version?>">See the full change log</a>.</p>
+		<a href="http://www.impressto.com/changelogs/<?=$current_version?>">See the full change log</a>.</p>
 	<p>
 		<a href="javascript:setversionconfirm()" class="btn">Close this dialogue</a>
 	</p>
@@ -36,8 +36,8 @@
 Welcome to <?php echo PROJECTNAME; ?>. Here are some resources that you may find useful:
 
 <ul>
-	<li><a href="http://kb.central.bitheads.ca" target="_blank">Getting Started</a></li>
-	<li><a href="http://kb.central.bitheads.ca" target="_blank">BitHeads Central</a></li>
+	<li><a href="http://kb.impressto.com" target="_blank">Getting Started</a></li>
+	<li><a href="http://kb.impressto.com" target="_blank">BitHeads Central</a></li>
 </ul>
 
 

@@ -4,7 +4,7 @@
 @Type: PHP
 @Filename: simple
 @Projectnum: 4660
-@Author: webdev@acart.com
+@Author: webdev@impressto.com
 @Status: complete
 @Date: 2012-02
 */

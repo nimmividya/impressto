@@ -1,17 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-/**
- * Events
- *
- * A simple events system for CodeIgniter.
- *
- * @version		1.0
- * @author		Dan Horrigan <http://dhorrigan.com>
- * @author		Eric Barnes <http://ericlbarnes.com>
- * @license		Apache License v2.0
- * @copyright	2010 Dan Horrigan
- * @package		PyroCMS\Core\Libraries
- */
+
 
 /**
  * Events Library

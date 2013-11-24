@@ -1,7 +1,7 @@
 <!--
 @Name: Bordered
 @Type: PHP
-@Author: webdev@acart.com
+@Author: webdev@impressto.com
 @Projectnum: 4660
 @Version: 1.2
 @Status: complete
